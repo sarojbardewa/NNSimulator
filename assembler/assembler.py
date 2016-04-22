@@ -5,6 +5,7 @@ R31 = 0x1F
 
 ADD = 0x1
 MUL = 0x2
+STORE = 0xF
 
 opcode_shift_amount = 28
 rs_shift_amount = 23 # assuming 32 (2^5) registers
@@ -30,26 +31,45 @@ def modifycommand( command, arg, shift_amount ):
     command = command | (R31 << shift_amount)
   
   if arg[0:1] == "#":
-    command = command | arg[1:] #<< immediate_shift_amount
+    command = command | int(arg[1:]) #<< immediate_shift_amount
     #NOTE: up to programer not to exceed limit. currently 2^12.
     #NOTE: this implimentation leads to some "interesting" behavior
   return command
 
+def output_command( sline ):
+  #sline = "ADD,R1,R2,R31"
 
-s = "ADD,R1,R2,R31"
+  argsin = sline.split(',')
 
-argsin = s.split(',')
+# print argsin
+# print argsin[0]
 
-print argsin
-print argsin[0]
-
-command = 0x00000000
+  command = 0x00000000
 
 
-command = modifycommand(command, argsin[0], opcode_shift_amount)
-command = modifycommand(command, argsin[1], rs_shift_amount)
-command = modifycommand(command, argsin[2], rt_shift_amount)
-command = modifycommand(command, argsin[3], rd_shift_amount)
+  command = modifycommand(command, argsin[0], opcode_shift_amount)
+  command = modifycommand(command, argsin[1], rs_shift_amount)
+  command = modifycommand(command, argsin[2], rt_shift_amount)
+  command = modifycommand(command, argsin[3], rd_shift_amount)
+# if argsin[4]
+#
+# command = modifycommand(command, argsin[3], rd_shift_amount)
+#
+#
+# print hex(command)
+# print bin(command)
+  return command
 
-print hex(command)
-print bin(command)
+#http://stackoverflow.com/questions/7165749/open-file-in-a-relative-location-in-python
+#http://stackoverflow.com/questions/4934806/how-can-i-find-scripts-directory-with-python
+import os
+script_dir = os.path.dirname(os.path.realpath(__file__)) #<-- absolute dir the script is in
+rel_path = "inputfile.txt"
+abs_file_path = os.path.join(script_dir, rel_path)
+
+
+with open(abs_file_path) as f:
+ for lines in f:
+    print hex(output_command(lines))
+
+
