@@ -5,6 +5,7 @@ R31 = 0x1F
 
 ADD = 0x1
 MUL = 0x2
+J = 0xA
 STORE = 0xF
 
 opcode_shift_amount = 28
@@ -20,6 +21,11 @@ def modifycommand( command, arg, shift_amount ):
     command = command | (ADD << shift_amount)
   if arg == "MUL":
     command = command | (MUL << shift_amount)
+  if arg == "J":
+    command = command | (J << shift_amount)
+  if arg == "STORE":
+    command = command | (STORE << shift_amount)
+  
  
   if arg == "R1":
     command = command | (R1 << shift_amount)
@@ -45,12 +51,18 @@ def output_command( sline ):
 # print argsin[0]
 
   command = 0x00000000
+  field_order = [opcode_shift_amount,
+                 rs_shift_amount,
+                 rt_shift_amount,
+                 rd_shift_amount]
+  arglen = len(argsin)
 
-
-  command = modifycommand(command, argsin[0], opcode_shift_amount)
-  command = modifycommand(command, argsin[1], rs_shift_amount)
-  command = modifycommand(command, argsin[2], rt_shift_amount)
-  command = modifycommand(command, argsin[3], rd_shift_amount)
+  for field in range(arglen):
+    command = modifycommand(command, argsin[field], field_order[field])
+# command = modifycommand(command, argsin[0], opcode_shift_amount)
+# command = modifycommand(command, argsin[1], rs_shift_amount)
+# command = modifycommand(command, argsin[2], rt_shift_amount)
+# command = modifycommand(command, argsin[3], rd_shift_amount)
 # if argsin[4]
 #
 # command = modifycommand(command, argsin[3], rd_shift_amount)
@@ -70,6 +82,6 @@ abs_file_path = os.path.join(script_dir, rel_path)
 
 with open(abs_file_path) as f:
  for lines in f:
-    print hex(output_command(lines))
+    print hex(output_command(lines)).lstrip("0x")
 
 
