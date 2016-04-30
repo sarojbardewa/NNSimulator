@@ -1,0 +1,31 @@
+<!DOCTYPE Desktop SYSTEM "hdl-prj.dtd">
+<Desktop>
+  <ProjectWindow Position="0 1 -1 -1 -1 -1 0 0 907 298">
+    <Column>462</Column>
+    <Column>38</Column>
+    <Column>387</Column>
+  </ProjectWindow>
+  <WatchDlg WindowTop="-1" WindowBottom="-1" WindowLeft="-1" WindowRight="-1" CaptureLBClick="True" CaptureMouseMove="False" CaptureFromSimulator="True" SelectedTabNum="0">
+    <WatchTab InspectedTime="0" ColumnWidth="0">Inspect 1</WatchTab>
+    <WatchTab InspectedTime="0" ColumnWidth="0">Inspect 2</WatchTab>
+    <WatchTab InspectedTime="0" ColumnWidth="0">Inspect 3</WatchTab>
+    <WatchTab InspectedTime="0" ColumnWidth="0">Inspect 4</WatchTab>
+    <WatchTab InspectedTime="0" ColumnWidth="0">Inspect 5</WatchTab>
+    <WatchTab InspectedTime="0" ColumnWidth="0">Inspect 6</WatchTab>
+    <WatchTab InspectedTime="0" ColumnWidth="0">Inspect 7</WatchTab>
+  </WatchDlg>
+  <MdiTabbedWindow Position="0 1 -1 -1 -1 -1 518 274 1337 696" IsReportWindow="True" CurrentTab="0">
+    <Tab SystemTabID="1" IsFile="True" Line="42">.\simulation.log</Tab>
+    <Tab SystemTabID="2" IsFile="True" Line="0">.\waveperl.log</Tab>
+    <Tab SystemTabID="3" IsFile="False">Break Points</Tab>
+    <Tab SystemTabID="4" IsFile="False">Errors</Tab>
+    <Tab SystemTabID="0" IsFile="False">CallStack</Tab>
+    <Tab SystemTabID="6" IsFile="False">Grep</Tab>
+  </MdiTabbedWindow>
+  <MdiTabbedWindow Position="0 1 -1 -1 -1 -1 156 157 990 630" IsReportWindow="False" CurrentTab="0">
+    <Tab SystemTabID="0" IsFile="True" Line="4">..\testbed.v</Tab>
+  </MdiTabbedWindow>
+  <TimingDiagram File=".\StimulusAndResults.btim">
+    <DiagramWindow X="180" Y="65" W="834" H="463"></DiagramWindow>
+  </TimingDiagram>
+</Desktop>

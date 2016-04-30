@@ -1,0 +1,89 @@
+SynaptiCAD VHDL/Verilog simulator rev. 45087.18563.
+simgen: Note: Loaded recent snapshot `printtest' from library `work'.
+  -s
+  +loadpli1=syncadverilogx.dll
+  +linedebug
+vpi_r: Note: PLI veriusertfs array loaded from library: `syncadverilogx.dll' using bootstrap: `register_syncad_tasks'
+Init time: 8.4 s (CPU time: 8.4 s)
+sim> puts "HELLO_SYNCAD_0x31"
+HELLO_SYNCAD_0x31
+sim> init_syncad
+BtimPli = IOR:010000001c00000049444c3a53796e6361642f436f7262614274696d506c693a312e3000010000000000000068000000010102000a0000003132372e302e302e3100542d1b00000014010f00525354893425571e9c00000000000001000000010000000002000000000000000800000001130f01004f4154010000001800000001130f010100010001000000010001050901010000000000
+sim> start_corba_msg_pump
+sim> start_corba_msg_pump
+sim> run
+SIM: =========STARTING SIMULATION=========
+SIM: a = 0000084f
+SIM: captured_data = 0000f8a7
+SIM: captured_data = 00000001
+SIM: captured_data = 00000000
+SIM: captured_data = 00000001
+SIM: captured_data = 00000001
+SIM: captured_data = 00000000
+SIM: captured_data = 0000165b
+SIM: captured_data = 00000001
+SIM: captured_data = ffffffff
+SIM: captured_data = 00000015
+Simulation interrupted at 2453179 ns
+../testbed.v:36   if (!$feof(data_file)) begin
+sim> puts "HELLO_SYNCAD_0x32"
+HELLO_SYNCAD_0x32
+sim> where
+Line 36, file "../testbed.v"
+Scope is (printtest)
+sim> time
+2453179 ns
+sim> start_corba_msg_pump
+sim> start_corba_msg_pump
+sim> run
+Simulation interrupted at 3953251 ns
+../testbed.v:36   if (!$feof(data_file)) begin
+sim> puts "HELLO_SYNCAD_0x33"
+HELLO_SYNCAD_0x33
+sim> time
+3953251 ns
+sim> start_corba_msg_pump
+sim> run
+Simulation interrupted at 8863253 ns
+../testbed.v:36   if (!$feof(data_file)) begin
+sim> puts "HELLO_SYNCAD_0x34"
+HELLO_SYNCAD_0x34
+sim> time
+8863253 ns
+sim> start_corba_msg_pump
+sim> run
+Simulation interrupted at 13864463 ns
+../testbed.v:36   if (!$feof(data_file)) begin
+sim> puts "HELLO_SYNCAD_0x35"
+HELLO_SYNCAD_0x35
+sim> time
+13864463 ns
+sim> start_corba_msg_pump
+sim> run
+Simulation interrupted at 17912897 ns
+../testbed.v:32 always  #  1 clk = ~clk;
+sim> puts "HELLO_SYNCAD_0x36"
+HELLO_SYNCAD_0x36
+sim> time
+17912897 ns
+sim> start_corba_msg_pump
+sim> run
+Simulation interrupted at 23486273 ns
+../testbed.v:36   if (!$feof(data_file)) begin
+sim> puts "HELLO_SYNCAD_0x37"
+HELLO_SYNCAD_0x37
+sim> time
+23486273 ns
+sim> start_corba_msg_pump
+sim> run
+Simulation interrupted at 28500335 ns
+../testbed.v:36   if (!$feof(data_file)) begin
+sim> puts "HELLO_SYNCAD_0x38"
+HELLO_SYNCAD_0x38
+sim> where
+Line 36, file "../testbed.v"
+Scope is (printtest)
+sim> time
+28500335 ns
+sim> start_corba_msg_pump
+sim> exit
