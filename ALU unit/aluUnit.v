@@ -1,3 +1,13 @@
+/***************************************
+ * ALU Execution Unit for NNDesign Project
+ * PURPOSE: 
+ *		This is the execution unit of NNSimulator.
+ * 		It takes in two inputs and based on the control
+ *		signals produces an output.
+ *	May 1, 2016
+  * Saroj Bardewa & Conor O'Connell
+********************************************/
+
 module ALU(ALUResult, ALUControl,SrcA, SrcB);
 parameter nBits = 32;
 input [nBits-1:0] SrcA,SrcB;
