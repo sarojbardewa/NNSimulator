@@ -15,7 +15,7 @@
     <WatchTab InspectedTime="0" ColumnWidth="0">Inspect 7</WatchTab>
   </WatchDlg>
   <MdiTabbedWindow Position="0 1 -1 -1 -1 -1 518 274 1337 696" IsReportWindow="True" CurrentTab="0">
-    <Tab SystemTabID="1" IsFile="True" Line="42">.\simulation.log</Tab>
+    <Tab SystemTabID="1" IsFile="True" Line="303659">.\simulation.log</Tab>
     <Tab SystemTabID="2" IsFile="True" Line="0">.\waveperl.log</Tab>
     <Tab SystemTabID="3" IsFile="False">Break Points</Tab>
     <Tab SystemTabID="4" IsFile="False">Errors</Tab>
@@ -23,7 +23,7 @@
     <Tab SystemTabID="6" IsFile="False">Grep</Tab>
   </MdiTabbedWindow>
   <MdiTabbedWindow Position="0 1 -1 -1 -1 -1 156 157 990 630" IsReportWindow="False" CurrentTab="0">
-    <Tab SystemTabID="0" IsFile="True" Line="4">..\testbed.v</Tab>
+    <Tab SystemTabID="0" IsFile="True" Line="6">..\testbed.v</Tab>
   </MdiTabbedWindow>
   <TimingDiagram File=".\StimulusAndResults.btim">
     <DiagramWindow X="180" Y="65" W="834" H="463"></DiagramWindow>
