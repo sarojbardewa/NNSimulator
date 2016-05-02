@@ -1,0 +1,53 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtNNSimulation
+vALU
+Z0 !s110 1462154031
+!i10b 1
+!s100 B?DGLhg]aO9SXhSR`d4nO3
+IEPX]09QLG=KOAW8TON^GZ1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/ALU unit/S
+w1462151873
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/ALU unit/aluUnit.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/ALU unit/aluUnit.v
+L0 1
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1462154031.000000
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/ALU unit/aluUnit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/ALU unit/aluUnit.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@a@l@u
+valutest
+R0
+!i10b 1
+!s100 _j5Wdc<Z_?4BOeoB0?Rla1
+I<:0?DQdGZmKo4d0WX[PA;1
+R1
+R2
+w1462154000
+8C:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\ALU unit\alutest.v
+FC:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\ALU unit\alutest.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\ALU unit\alutest.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\ALU unit\alutest.v|
+!s101 -O0
+!i113 1
+R5
