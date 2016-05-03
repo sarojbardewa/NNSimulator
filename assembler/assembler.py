@@ -1,49 +1,83 @@
 
-R0 = 0x0 
+R0 = 0x0
 R1 = 0x1
 R2 = 0x2
 R3 = 0x3
 R4 = 0x4
-R5 = 0x5 
-R6 = 0x6 
-R7 = 0x7 
-R8 = 0x8 
-R9 = 0x9 
-R10 = 0xA 
-R11 = 0xB
-R12 = 0xC
-R13 = 0xD
-R14 = 0xE
-R15 = 0xF 
+R5 = 0x5
+R6 = 0x6
+R7 = 0x7
+R8 = 0x8
+R9 = 0x9
+R10 = 0xa
+R11 = 0xb
+R12 = 0xc
+R13 = 0xd
+R14 = 0xe
+R15 = 0xf
 R16 = 0x10
-R17 = 0x11 
-R18 = 0x12 
-R19 = 0x13 
-R20 = 0x14 
+R17 = 0x11
+R18 = 0x12
+R19 = 0x13
+R20 = 0x14
 R21 = 0x15
 R22 = 0x16
 R23 = 0x17
 R24 = 0x18
-R25 = 0x19 
-R26 = 0x1A 
-R27 = 0x1B
-R28 = 0x1C 
-R29 = 0x1D
-R30 = 0x1E
-R31 = 0x1F
+R25 = 0x19
+R26 = 0x1a
+R27 = 0x1b
+R28 = 0x1c
+R29 = 0x1d
+R30 = 0x1e
+R31 = 0x1f
+R32 = 0x20
+R33 = 0x21
+R34 = 0x22
+R35 = 0x23
+R36 = 0x24
+R37 = 0x25
+R38 = 0x26
+R39 = 0x27
+R40 = 0x28
+R41 = 0x29
+R42 = 0x2a
+R43 = 0x2b
+R44 = 0x2c
+R45 = 0x2d
+R46 = 0x2e
+R47 = 0x2f
+R48 = 0x30
+R49 = 0x31
+R50 = 0x32
+R51 = 0x33
+R52 = 0x34
+R53 = 0x35
+R54 = 0x36
+R55 = 0x37
+R56 = 0x38
+R57 = 0x39
+R58 = 0x3a
+R59 = 0x3b
+R60 = 0x3c
+R61 = 0x3d
+R62 = 0x3e
+R63 = 0x3f
+
+
 
 ADD = 0x1
 MUL = 0x2
 SINN = 0x3
 MAC = 0x4
-J = 0xA
+#J = 0xA
 LD = 0xE
 ST = 0xF
 
 opcode_shift_amount = 28
-rs_shift_amount = 23 # assuming 32 (2^5) registers
-rt_shift_amount = 18 # assuming 32 registers
-rd_shift_amount = 13 # assuming 32 registers
+rs_shift_amount = 22 # assuming 64 (2^6) registers
+rt_shift_amount = 17 # assuming 64 registers
+rd_shift_amount = 10 # assuming 64 registers
 immediate_shift_amount = 0 #NOTE: up to programer not to exceed limit.
 
 #NOTE: all params passed by referance in python.
@@ -57,8 +91,8 @@ def modifycommand( command, arg, shift_amount ):
     command = command | (SINN << shift_amount)
   if arg == "MAC":
     command = command | (MAC << shift_amount)
-  if arg == "J":
-    command = command | (J << shift_amount)
+#  if arg == "J":
+#    command = command | (J << shift_amount)
   if arg == "ST":
     command = command | (ST << shift_amount)
   if arg == "LD":
@@ -129,6 +163,70 @@ def modifycommand( command, arg, shift_amount ):
     command = command | (R30 << shift_amount)
   if arg == "R31":
     command = command | (R31 << shift_amount)
+  if arg == "R32":
+    command = command | (R32 << shift_amount)
+  if arg == "R33":
+    command = command | (R33 << shift_amount)
+  if arg == "R34":
+    command = command | (R34 << shift_amount)
+  if arg == "R35":
+    command = command | (R35 << shift_amount)
+  if arg == "R36":
+    command = command | (R36 << shift_amount)
+  if arg == "R37":
+    command = command | (R37 << shift_amount)
+  if arg == "R38":
+    command = command | (R38 << shift_amount)
+  if arg == "R39":
+    command = command | (R39 << shift_amount)
+  if arg == "R40":
+    command = command | (R40 << shift_amount)
+  if arg == "R41":
+    command = command | (R41 << shift_amount)
+  if arg == "R42":
+    command = command | (R42 << shift_amount)
+  if arg == "R43":
+    command = command | (R43 << shift_amount)
+  if arg == "R44":
+    command = command | (R44 << shift_amount)
+  if arg == "R45":
+    command = command | (R45 << shift_amount)
+  if arg == "R46":
+    command = command | (R46 << shift_amount)
+  if arg == "R47":
+    command = command | (R47 << shift_amount)
+  if arg == "R48":
+    command = command | (R48 << shift_amount)
+  if arg == "R49":
+    command = command | (R49 << shift_amount)
+  if arg == "R50":
+    command = command | (R50 << shift_amount)
+  if arg == "R51":
+    command = command | (R51 << shift_amount)
+  if arg == "R52":
+    command = command | (R52 << shift_amount)
+  if arg == "R53":
+    command = command | (R53 << shift_amount)
+  if arg == "R54":
+    command = command | (R54 << shift_amount)
+  if arg == "R55":
+    command = command | (R55 << shift_amount)
+  if arg == "R56":
+    command = command | (R56 << shift_amount)
+  if arg == "R57":
+    command = command | (R57 << shift_amount)
+  if arg == "R58":
+    command = command | (R58 << shift_amount)
+  if arg == "R59":
+    command = command | (R59 << shift_amount)
+  if arg == "R60":
+    command = command | (R60 << shift_amount)
+  if arg == "R61":
+    command = command | (R61 << shift_amount)
+  if arg == "R62":
+    command = command | (R62 << shift_amount)
+  if arg == "R63":
+    command = command | (R63 << shift_amount)
   
   if arg[0:1] == "#":
     command = command | int(arg[1:]) #<< immediate_shift_amount
