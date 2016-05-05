@@ -1,0 +1,49 @@
+/* PURPOSE: This is the test bench for dataMemory Module
+ * INPUT: None
+ * OUTPUT: None
+ 
+ * Saroj Bardewa
+ */
+module dataMem_Test();
+	parameter IN_BUS_WIDTH=32;
+	parameter MEMORY_WIDTH=32;				// Bits of Memory accessed at a time 
+		
+	reg 	CLK, writeEn,readEn;
+	reg 	[IN_BUS_WIDTH-1:0] ALUMemAdd;
+	reg 	[MEMORY_WIDTH-1:0] writeDataM;  // 32bit data value
+	wire 	[MEMORY_WIDTH-1:0] readDataW;
+
+
+initial 
+	begin 
+		CLK = 0;
+	end
+
+//Generate Clock
+always
+	begin	
+		CLK = ~CLK;
+		#5;
+	end
+	
+dataMemory Data1 (CLK,writeEn,readEn,ALUMemAdd,writeDataM,readDataW);
+
+initial 
+	begin
+		writeEn = 0; readEn = 1; ALUMemAdd = 4; writeDataM = 0;  // zeroth address
+	#10	writeEn = 1; readEn = 1; ALUMemAdd = 1; writeDataM = 110;
+	/*#10	writeEn = 0; readEn = 1; ALUMemAdd = 1; writeDataM = 0;
+	#10	writeEn = 1; readEn = 0; ALUMemAdd = 5; writeDataM = 100;
+	#10	writeEn = 1; readEn = 0; ALUMemAdd = 7; writeDataM = 500; */
+	
+	#20 $finish();
+	
+	end
+	
+endmodule
+
+
+
+
+
+
