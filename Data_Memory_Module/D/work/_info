@@ -52,3 +52,47 @@ R4
 !i113 1
 R5
 ndata@memory
+vinstructionMemory
+Z6 !s110 1462556486
+!i10b 1
+!s100 VdPm1]GcNPnCOU:oUmU020
+IVffXhaZ>2Y@c1_b^A;3=53
+R1
+R2
+w1462426418
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/D/instructMemoryModule.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/D/instructMemoryModule.v
+L0 9
+R3
+r1
+!s85 0
+31
+!s108 1462556486.000000
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/D/instructMemoryModule.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/D/instructMemoryModule.v|
+!s101 -O0
+!i113 1
+R5
+ninstruction@memory
+vinstructMem_Test
+R6
+!i10b 1
+!s100 9S;@7Sh]`mMH0M3PA8oe:1
+InS:UZY@i0^kmKN]i[ciLM3
+R1
+R2
+w1462426422
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/D/instrctMem_testbench.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/D/instrctMem_testbench.v
+L0 8
+R3
+r1
+!s85 0
+31
+!s108 1462556485.000000
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/D/instrctMem_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/D/instrctMem_testbench.v|
+!s101 -O0
+!i113 1
+R5
+ninstruct@mem_@test
