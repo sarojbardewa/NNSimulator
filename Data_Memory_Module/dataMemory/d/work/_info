@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+vdataMem_Test
+Z0 !s110 1462748314
+!i10b 1
+!s100 AFFijnZggkc@[>dnz1jZC0
+IMKMz<g_ANdnU@nE7Fn:OH0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/dataMemory/d
+w1462748101
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/dataMemory/dataMem_testbench.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/dataMemory/dataMem_testbench.v
+L0 7
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1462748314.000000
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/dataMemory/dataMem_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/dataMemory/dataMem_testbench.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+ndata@mem_@test
+vdataMemory
+R0
+!i10b 1
+!s100 iP3FFLAf@?UJZh8kiP1oN1
+IO@KVB?9]iW3b3o9UMiHk90
+R1
+R2
+w1462747882
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/dataMemory/dataMemory.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/dataMemory/dataMemory.v
+L0 14
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/dataMemory/dataMemory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/dataMemory/dataMemory.v|
+!s101 -O0
+!i113 1
+R5
+ndata@memory

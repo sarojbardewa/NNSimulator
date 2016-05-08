@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/d
+vfile_readmemh
+!s110 1462737875
+!i10b 1
+!s100 d=HjfUeHhP@BaCe]FkZi62
+IY`zRG_L8>UgH]O29zZgZf0
+VDg1SIo80bB@j0V0VzS_@n1
+dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/readMemory/l
+w1462737784
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/readMemory/readMemExample.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/readMemory/readMemExample.v
+L0 1
+OP;L;10.4a;61
+r1
+!s85 0
+31
+!s108 1462737875.000000
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/readMemory/readMemExample.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Data_Memory_Module/readMemory/readMemExample.v|
+!s101 -O0
+!i113 1
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0

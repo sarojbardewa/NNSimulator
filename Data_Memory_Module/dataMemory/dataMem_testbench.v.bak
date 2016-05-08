@@ -30,13 +30,15 @@ dataMemory Data1 (CLK,writeEn,readEn,ALUMemAdd,writeDataM,readDataW);
 
 initial 
 	begin
-		writeEn = 0; readEn = 1; ALUMemAdd = 4; writeDataM = 0;  // zeroth address
-	#10	writeEn = 1; readEn = 1; ALUMemAdd = 1; writeDataM = 110;
-	/*#10	writeEn = 0; readEn = 1; ALUMemAdd = 1; writeDataM = 0;
-	#10	writeEn = 1; readEn = 0; ALUMemAdd = 5; writeDataM = 100;
-	#10	writeEn = 1; readEn = 0; ALUMemAdd = 7; writeDataM = 500; */
+		writeEn = 0; readEn = 1; ALUMemAdd = 0; writeDataM = 0;  // zeroth address
+	#10	writeEn = 0; readEn = 1; ALUMemAdd = 1; writeDataM = 0;
+	#10	writeEn = 0; readEn = 1; ALUMemAdd = 7; writeDataM = 0;
+	#10	writeEn = 0; readEn = 1; ALUMemAdd = 10; writeDataM = 0;
+	#10	writeEn = 1; readEn = 0; ALUMemAdd = 0; writeDataM = 1;   //Write to a file
+	#10	writeEn = 1; readEn = 0; ALUMemAdd = 1; writeDataM = -1;  // Write to a file
+	#10	writeEn = 1; readEn = 0; ALUMemAdd = 2; writeDataM = 0;   // Write to a file
 	
-	#20 $finish();
+	#10 $finish();
 	
 	end
 	
