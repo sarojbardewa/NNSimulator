@@ -1,7 +1,6 @@
 /* PURPOSE: This is the test bench for dataMemory Module
  * INPUT: None
  * OUTPUT: None
- 
  * Saroj Bardewa
  */
 module dataMem_Test();
@@ -12,7 +11,6 @@ module dataMem_Test();
 	reg 	[IN_BUS_WIDTH-1:0] ALUMemAdd;
 	reg 	[MEMORY_WIDTH-1:0] writeDataM;  // 32bit data value
 	wire 	[MEMORY_WIDTH-1:0] readDataW;
-
 
 initial 
 	begin 
