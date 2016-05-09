@@ -71,6 +71,7 @@ MUL = 0x2
 SINN = 0x3
 SGT = 0x3
 MAC = 0x4
+ADDI = 0x9
 #J = 0xA
 LD = 0xE
 ST = 0xF
@@ -89,6 +90,8 @@ def modifycommand( command, arg, shift_amount ):
     command = command | (NOP << shift_amount)
   if arg == "ADD":
     command = command | (ADD << shift_amount)
+  if arg == "ADDI":
+    command = command | (ADDI << shift_amount)
   if arg == "MUL":
     command = command | (MUL << shift_amount)
   if arg == "SINN":
