@@ -65,7 +65,7 @@ R62 = 0x3e
 R63 = 0x3f
 
 
-
+NOP = 0x0
 ADD = 0x1
 MUL = 0x2
 SINN = 0x3
@@ -74,6 +74,7 @@ MAC = 0x4
 #J = 0xA
 LD = 0xE
 ST = 0xF
+HALT = 0xB
 
 opcode_shift_amount = 28
 rs_shift_amount = 22 # assuming 64 (2^6) registers
@@ -84,6 +85,8 @@ immediate_shift_amount = 0 #NOTE: up to programer not to exceed limit.
 #NOTE: all params passed by referance in python.
 def modifycommand( command, arg, shift_amount ):
   
+  if arg == "NOP":
+    command = command | (NOP << shift_amount)
   if arg == "ADD":
     command = command | (ADD << shift_amount)
   if arg == "MUL":
@@ -100,6 +103,8 @@ def modifycommand( command, arg, shift_amount ):
     command = command | (ST << shift_amount)
   if arg == "LD":
     command = command | (LD << shift_amount)
+  if arg == "HALT":
+    command = command | (HALT << shift_amount)
   
  
   if arg == "R0":
@@ -235,6 +240,8 @@ def modifycommand( command, arg, shift_amount ):
     command = command | int(arg[1:]) #<< immediate_shift_amount
     #NOTE: up to programer not to exceed limit. currently 2^12.
     #NOTE: this implimentation leads to some "interesting" behavior
+
+    
   return command
 
 def output_command( sline ):
