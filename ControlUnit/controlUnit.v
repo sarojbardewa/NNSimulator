@@ -45,6 +45,15 @@ case (opcode)
         ALUControl2 = 'b111;
         ALUSrc = 0;
         RegDst = 0;
+  4'h9 : //ADDI
+  begin
+        RegWrite = 1;
+        MemtoReg = 0;
+        MemWrite = 0;
+        ALUControl1 = 'b000;
+        ALUControl2 = 'b111;
+        ALUSrc = 1;
+        RegDst = 0;
   end
   4'h2 : //MUL
   begin
