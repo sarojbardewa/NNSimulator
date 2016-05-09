@@ -69,6 +69,7 @@ R63 = 0x3f
 ADD = 0x1
 MUL = 0x2
 SINN = 0x3
+SGT = 0x3
 MAC = 0x4
 #J = 0xA
 LD = 0xE
@@ -89,6 +90,8 @@ def modifycommand( command, arg, shift_amount ):
     command = command | (MUL << shift_amount)
   if arg == "SINN":
     command = command | (SINN << shift_amount)
+  if arg == "SGT":
+    command = command | (SGT << shift_amount)
   if arg == "MAC":
     command = command | (MAC << shift_amount)
 #  if arg == "J":
