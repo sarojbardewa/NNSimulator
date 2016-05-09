@@ -26,6 +26,16 @@ reg RegDst;
 
 always @(opcode)
 case (opcode)
+  4'h0 : //NOP
+  begin
+        RegWrite = 0;
+        MemtoReg = 0;
+        MemWrite = 0;
+        ALUControl1 = 'b111;
+        ALUControl2 = 'b111;
+        ALUSrc = 0;
+        RegDst = 0;
+  end
   4'h1 : //ADD
   begin
         RegWrite = 1;
@@ -85,6 +95,10 @@ case (opcode)
         ALUControl2 = 'b111;
         ALUSrc = 0;
         RegDst = 0;
+  4'hB : //HALT
+  begin
+    $finish();
+  end
   end
   default :$display("INVALID OPCODE ERROR"); 
 endcase
