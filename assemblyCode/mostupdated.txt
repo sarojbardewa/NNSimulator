@@ -1,0 +1,107 @@
+@ Assembly code 
+@ ECE 586
+@************************************************
+@ Set input values
+@************************************************
+@ R0 = 0 
+LD R1,0(R0) @ Load the content of memory address R0 + 0 in R1
+LD R2,1(R0) @ Load the content of memory address R0 + 1 in R2
+LD R3,2(R0) @ Load the content of memory address R0 + 2 in R3
+LD R4,3(R0) @ Load the content of memory address R0 + 3 in R4
+@***********************************************
+@ Set all input-hidden neurons weights
+@************************************************
+LD R9,4(R0) 	@ Input-Hidden weight for X1-N1
+LD R10,5(R0)	@ Input-Hidden weight for X1-N2
+LD R11,6(R0) 	@ Input-Hidden weight for X1-N3
+LD R12,7(R0)	@ Input-Hidden weight for X1-N4
+LD R13,8(R0)	@ Input-Hidden weight for X2-N1
+LD R14,9(R0)	@ Input-Hidden weight for X2-N2
+LD R15,10(R0) 	@ Input-Hidden weight for X2-N3
+LD R16,11(R0)	@ Input-Hidden weight for X2-N4
+LD R17,12(R0) 	@ Input-Hidden weight for X3-N1
+LD R18,13(R0)	@ Input-Hidden weight for X3-N2
+LD R19,14(R0) 	@ Input-Hidden weight for X3-N3
+LD R20,15(R0)	@ Input-Hidden weight for X3-N4
+LD R21,16(R0) 	@ Input-Hidden weight for X4-N1
+LD R22,17(R0)	@ Input-Hidden weight for X4-N2
+LD R23,18(R0) 	@ Input-Hidden weight for X4-N3
+LD R24,19(R0)	@ Input-Hidden weight for X4-N4
+@*****************************************
+@Set all Hidden neurons-Output weights
+@*******************************************
+LD R25,20(R0) 	@ Output-Hidden weight for Y1-N1
+LD R26,21(R0)	@ Output-Hidden weight for Y1-N2
+LD R27,22(R0) 	@ Output-Hidden weight for Y1-N3
+LD R28,23(R0)	@ Output-Hidden weight for Y1-N4
+LD R29,24(R0) 	@ Output-Hidden weight for Y2-N1
+LD R30,25(R0)	@ Output-Hidden weight for Y2-N2
+LD R31,26(R0) 	@ Output-Hidden weight for Y2-N3
+LD R32,27(R0)	@ Output-Hidden weight for Y2-N4
+LD R33,28(R0) 	@ Output-Hidden weight for Y3-N1
+LD R34,29(R0)	@ Output-Hidden weight for Y3-N2
+LD R35,30(R0) 	@ Output-Hidden weight for Y3-N3
+LD R36,31(R0)	@ Output-Hidden weight for Y3-N4
+LD R37,32(R0) 	@ Output-Hidden weight for Y4-N1
+LD R38,33(R0)	@ Output-Hidden weight for Y4-N2
+LD R39,34(R0) 	@ Output-Hidden weight for Y4-N3
+LD R40,35(R0)	@ Output-Hidden weight for Y4-N4
+@*******************************************
+@ Compute the weighted value of Hidden Neuron
+@*********************************************
+@ Compute Value of Hidden Neuron 1 (N1)
+MUL R49,R1,R9  		@ R49 = R1*R9
+MAC R49,R2,R10      @ R49 = R49+R2*R10
+MAC R49,R3,R11  	@ R49 = R49+R3*R11
+MAC R49,R4,R12      @ R49 = R49+R4*R12
+SGT R41, R49,R0     @ R41 = R49>=R0 ? 1:0
+@ Compute Value of Hidden Neuron 2 (N2)
+MUL R50,R1,R13  	@ R50 = R1*R13
+MAC R50,R2,R14  	@ R50 = R2*R14+R50
+MAC R50,R3,R15  	@ R50 = R3*R15+R50
+MAC R50,R4,R16      @ R50 = R4*R16+R50
+SGT R42, R51,R54    @ R42 = R50>=R0 ? 1:0
+@ Compute Value of Hidden Neuron 3 (N3)
+MUL R51,R1,R17  	@ R51 = R1*R17
+MAC R51,R2,R18  	@ R51 = R2*R18+R51
+MAC R51,R3,R19  	@ R51 = R3*R19+R51
+MAC R51,R4,R20      @ R51 = R4*R20+R51
+SGT R43, R51,R0     @ R43 = R51>=R0 ? 1:0
+@ Compute Value of Hidden Neuron 4 (N4)
+MUL R52,R1,R21  	@ R52 = R1*R21
+MAC R52,R2,R22  	@ R52 = R2*R22+R52
+MAC R52,R3,R23  	@ R52 = R3*R23+R52
+MAC R52,R4,R24      @ R52 = R4*R24+R52
+SGT R44, R51,R54    @ R44 = R52>=R0 ? 1:0
+@**********************************************
+@ Compute the value of weighted OUTPUT Neurons
+@ and compute the final output value
+@***********************************************
+@ Compute the weighted output Neuron Y1
+MUL R49,R41,R25  	@ R49 = R41*R21
+MAC R49,R42,R26  	@ R49 = R22*R22+R49
+MAC R49,R43,R27  	@ R49 = R43*R23+R49
+MAC R49,R44,R28     @ R49 = R44*R24+R49
+SGT R5, R49,R0      @ R5 = R49>=R0 ? 1:0
+ST  R5,0(R0)
+@ Compute the weighted output Neuron Y2
+MUL R50,R41,R29  	@ R50 = R41*R29
+MAC R50,R42,R30  	@ R50 = R22*R30+R50
+MAC R50,R43,R31  	@ R50 = R43*R31+R50
+MAC R50,R44,R32     @ R50 = R44*R32+R50
+SGT R6, R50,R0      @ R6 = R50>=R0 ? 1:0
+ST  R6,1(R0)		@ Store the result
+@ Compute the weighted output Neuron Y3
+MUL R51,R41,R33  	@ R51 = R41*R33
+MAC R51,R42,R34  	@ R51 = R22*R34+R51
+MAC R51,R43,R35  	@ R51 = R43*R35+R51
+MAC R51,R44,R36     @ R51 = R44*R36+R51
+SGT R7, R51,R0      @ R7 = R50>=R0 ? 1:0
+ST  R7,2(R0)		@ Store the result
+@ Compute the weighted output Neuron Y4
+MUL R52,R41,R37  	@ R52 = R41*R37
+MAC R52,R42,R38  	@ R52 = R22*R38+R52
+MAC R52,R43,R39  	@ R52 = R43*R39+R52
+MAC R52,R44,R40     @ R52 = R44*R40+R52
+SGT R8, R52,R0      @ R8 = R52>=R0 ? 1:0
+ST R8,3(R0)			@ Store the result
