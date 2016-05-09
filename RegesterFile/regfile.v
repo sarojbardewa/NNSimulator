@@ -8,7 +8,7 @@
 //http://courses.cs.washington.edu/courses/cse370/10sp/pdfs/lectures/regfile.txt
 
 
-module regfile ( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, rdDataB);
+module regfile ( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, rdDataB, rdAddrC, rdDataC);
    parameter NUM_ADDR_BITS = 6;
    parameter REG_WIDTH = 32;
    parameter NUM_REGS = 2**NUM_ADDR_BITS;
@@ -21,11 +21,14 @@ module regfile ( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, r
    output [REG_WIDTH - 1:0]    rdDataA;
    input [NUM_ADDR_BITS - 1:0] rdAddrB;
    output [REG_WIDTH - 1:0]    rdDataB;
+   input [NUM_ADDR_BITS - 1:0] rdAddrC;
+   output [REG_WIDTH - 1:0]    rdDataC;
 
    reg [REG_WIDTH - 1:0] 	 regfile [0:NUM_REGS - 1];
 
    assign rdDataA = rdAddrA ? regfile[rdAddrA] : 32'h00000000;
    assign rdDataB = rdAddrB ? regfile[rdAddrB] : 32'h00000000;
+   assign rdDataC = rdAddrC ? regfile[rdAddrC] : 32'h00000000;
 
    always @(posedge clk) begin
       if (writeEnable) regfile[wrAddr] <= wrData;

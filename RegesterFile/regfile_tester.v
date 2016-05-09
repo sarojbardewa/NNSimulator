@@ -15,10 +15,12 @@ reg [NUM_ADDR_BITS - 1:0] wrAddr;
 reg [REG_WIDTH - 1:0] wrData;
 reg [NUM_ADDR_BITS - 1:0] rdAddrA;
 reg [NUM_ADDR_BITS - 1:0] rdAddrB;
+reg [NUM_ADDR_BITS - 1:0] rdAddrC;
 wire [REG_WIDTH - 1:0] rdDataA;
 wire [REG_WIDTH - 1:0] rdDataB;
+wire [REG_WIDTH - 1:0] rdDataC;
 
-regfile RF_1( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, rdDataB);
+regfile RF_1( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, rdDataB, rdAddrC, rdDataC);
 
 initial
 repeat (50) 
@@ -38,6 +40,7 @@ initial
     wrAddr = 'h2;
     wrData = 'h00000001;
     rdAddrA = 'h1;
+    rdAddrC = 'h1;
     #4
     writeEnable = 'b1;
     wrAddr = 'h2;
@@ -62,6 +65,7 @@ initial
     wrData = 'hDDDDDDDD;
     rdAddrA = 'h3F;
     rdAddrB = 'h2;
+    rdAddrC = 'h3F;
     #6
     $finish();
   end
