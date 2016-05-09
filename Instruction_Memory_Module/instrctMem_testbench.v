@@ -7,7 +7,7 @@
 
 module instructMem_Test();
 parameter OUT_BUS_WIDTH=32;   			//Output Bus Width
-parameter IN_BUS_WIDTH =16;				//Input Bus Width
+parameter IN_BUS_WIDTH =32;				//Input Bus Width
 
 reg[IN_BUS_WIDTH-1:0] F_PC;			//input PC 
 wire[OUT_BUS_WIDTH-1:0] Instr;				// Hex memory

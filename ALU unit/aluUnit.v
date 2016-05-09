@@ -28,10 +28,10 @@ end
              ALUResult <= SrcA+SrcB;
 		3'b001:		 //Multiply the data (mul)
 			 ALUResult <= SrcA*SrcB; 
-		3'b010:		//Set Less Than	(slt)		
-			 ALUResult <= (SrcA<SrcB) ? 32'b0:32'b1;   //Src A = -2; SrcB = R0 = 0; The SrcA<SrcB = 0
-		3'b111:		//Set Less Than	(slt)		
-			 ALUResult <= SrcA;   //Src A = -2; SrcB = R0 = 0; The SrcA<SrcB = 0
+		3'b010:		//Set Greater Than (SGT) (Comparator)		
+			 ALUResult <= (SrcA>=SrcB) ? 32'b1:32'b0;   //Src A = -2; SrcB = R0 = 0; The SrcA<SrcB = 0
+		3'b111:		// No nothing		
+			 ALUResult <= SrcA;   
 			 
 		default:   	
 			ALUResult = 32'd0;
