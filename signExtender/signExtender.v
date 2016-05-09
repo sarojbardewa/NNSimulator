@@ -11,7 +11,7 @@
 //http://stackoverflow.com/questions/4176556/how-to-sign-extend-a-number-in-verilog
 
 module signEx( clk, valin, extended );
-parameter size_in = 10;
+parameter size_in = 16;
 parameter size_out = 32;
 
 input clk;
