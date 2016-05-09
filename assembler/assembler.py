@@ -79,7 +79,7 @@ HALT = 0xB
 
 opcode_shift_amount = 28
 rs_shift_amount = 22 # assuming 64 (2^6) registers
-rt_shift_amount = 17 # assuming 64 registers
+rt_shift_amount = 16 # assuming 64 registers
 rd_shift_amount = 10 # assuming 64 registers
 immediate_shift_amount = 0 #NOTE: up to programer not to exceed limit.
 
