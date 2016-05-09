@@ -8,10 +8,11 @@
 @************************************************
 @ Set input values
 @************************************************
-LD R1,0(0) @ Load the content of memory address 0 + 0 in R1
-LD R2,1(0) @ Load the content of memory address 0 + 1 in R2
-LD R3,2(0) @ Load the content of memory address 0 + 2 in R3
-LD R4,3(0) @ Load the content of memory address 0 + 3 in R4
+@ R0 = 0 
+LD R1,0(R0) @ Load the content of memory address R0 + 0 in R1
+LD R2,1(R0) @ Load the content of memory address R0 + 1 in R2
+LD R3,2(R0) @ Load the content of memory address R0 + 2 in R3
+LD R4,3(R0) @ Load the content of memory address R0 + 3 in R4
 @***********************************************
 @ Set all input-hidden neurons weights
 @************************************************
