@@ -1,3 +1,4 @@
+# use (in linux): python assembler.py | unix2dos.exe > output.txt
 
 R0 = 0x0
 R1 = 0x1
@@ -87,7 +88,7 @@ immediate_shift_amount = 0 #NOTE: up to programer not to exceed limit.
 def modifycommand( command, arg, shift_amount ):
   
   if arg == "NOP":
-    command = command | (NOP << shift_amount)
+    return 0x00000000
   if arg == "ADD":
     command = command | (ADD << shift_amount)
   if arg == "ADDI":
@@ -244,6 +245,8 @@ def modifycommand( command, arg, shift_amount ):
     #NOTE: up to programer not to exceed limit. currently 2^12.
     #NOTE: this implimentation leads to some "interesting" behavior
 
+  if arg[0:2] == "0x":
+    command = command | int(arg[2:], 16)
     
   return command
 
@@ -287,6 +290,6 @@ abs_file_path = os.path.join(script_dir, rel_path)
 
 with open(abs_file_path) as f:
  for lines in f:
-    print hex(output_command(lines)).lstrip("0x")
+    print hex(output_command(lines)).lstrip("0x").zfill(8)
 
 
