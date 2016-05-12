@@ -9,13 +9,13 @@ z2
 cModel Technology
 dC:/Modeltech_pe_edu_10.4a/examples
 vcpu
-Z0 !s110 1462947314
+Z0 !s110 1463017320
 !i10b 1
-!s100 EF=9VGAiFmNzU]3ZgRL7e1
-Iz5nc9BGieID?DfNTb`Pn82
+!s100 XZm2jci[V[jTcQRi_bdWf2
+IQB28>YhL1RSVHlj^:KCZk0
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/c
-w1462947306
+w1463017303
 8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v
 FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v
 L0 1
@@ -23,7 +23,7 @@ Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1462947314.000000
+Z4 !s108 1463017320.000000
 !s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v|
 !s101 -O0
@@ -51,6 +51,28 @@ R4
 !i113 1
 R5
 ncpu@test
+vIFID_Reg
+R0
+!i10b 1
+!s100 ac?YiIGLBYoU:n]ofPaI10
+Iab0n<h86fCj7SDZT_:IU23
+R1
+R2
+w1463017023
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/IFID_Reg.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/IFID_Reg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/IFID_Reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/IFID_Reg.v|
+!s101 -O0
+!i113 1
+R5
+n@i@f@i@d_@reg
 vinstructionMemory
 R0
 !i10b 1
