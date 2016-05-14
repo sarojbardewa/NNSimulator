@@ -10,7 +10,4 @@ module cpuTest;
 			#10;
 		end
 	
-	initial 
-	#100 $finish();
-	
 endmodule

@@ -5,7 +5,7 @@
  * 		It takes in two inputs and based on the control
  *		signals produces an output.
  *	May 1, 2016
-  * Saroj Bardewa & Conor O'Connell
+  * Saroj Bardewa
 ********************************************/
 
 module ALU(ALUResult, ALUControl,SrcA, SrcB);
@@ -28,7 +28,7 @@ end
              ALUResult <= SrcA+SrcB;
 		3'b001:		 //Multiply the data (mul)
 			 ALUResult <= SrcA*SrcB; 
-		3'b010:		//Set Greater Than (SGT) (Comparator)		
+		3'b010:		// Set if non-negative
 			 ALUResult <= (SrcA>=SrcB) ? 32'b1:32'b0;   //Src A = -2; SrcB = R0 = 0; The SrcA<SrcB = 0
 		3'b111:		// No nothing		
 			 ALUResult <= SrcA;   

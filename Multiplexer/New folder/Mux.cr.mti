@@ -1,0 +1,39 @@
+{{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexertester.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexertester.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+Start time: 11:05:17 on May 14,2016
+vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexertester.v 
+-- Compiling module muxtester
+
+Top level modules:
+	muxtester
+End time: 11:05:17 on May 14,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexertester.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexertester.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module muxtester
+
+Top level modules:
+	muxtester
+
+} {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+Start time: 11:05:18 on May 14,2016
+vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v 
+-- Compiling module mux32x2
+-- Compiling module mux32x4
+
+Top level modules:
+	mux32x4
+End time: 11:05:18 on May 14,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux32x2
+-- Compiling module mux32x4
+
+Top level modules:
+	mux32x4
+
+} {} {}}

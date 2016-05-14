@@ -13,10 +13,10 @@
  
  module dataMemory(CLK,writeEn,readEn,ALUMemAdd,writeDataM,readDataW);
 	parameter DATA_BASE_ADD = 5;		// Starting data base address
-	parameter OUTPUT_FILE_SIZE = 4;         // Depends on the number of output to write
+	parameter OUTPUT_FILE_SIZE = 16;         // Depends on the number of output to write
 	parameter IN_BUS_WIDTH=32;
 	parameter MEMORY_WIDTH=32;				// Bits of Memory accessed at a time 
-	parameter ADDRESS_SIZE=20; 				// Size of memory bank
+	parameter ADDRESS_SIZE=2**10; 				// Size of memory bank
 										   // that can be referenced by a Address size
 	integer file;
 	input 	CLK, writeEn,readEn;
@@ -30,10 +30,10 @@
 	 * value stored at the particular register specified by the input address */
 	
 	reg signed [MEMORY_WIDTH-1:0] dataMemoryBank[0:ADDRESS_SIZE-1]; //#of locations = ADDRESS_SIZE each with MEMORY_WIDTH size
-	reg signed [MEMORY_WIDTH-1:0] outputMemoryBank[0:OUTPUT_FILE_SIZE];
+	reg signed [MEMORY_WIDTH-1:0] outputMemoryBank[0:OUTPUT_FILE_SIZE-1];
 	
-	initial	$readmemh("dataMemoryFile.txt",dataMemoryBank);  //Read Memory Image
-	initial file = $fopen("output.txt","w"); 	// Initially the file is empty
+	initial	$readmemh("memoryImage.txt",dataMemoryBank);  //Read Memory Image
+	initial file = $fopen("outputV1.txt","w"); 	// Initially the file is empty
 	   		
 	//Write Data is clock synchronous
 	always@(posedge CLK,ALUMemAdd,writeEn,writeDataM,readEn)
@@ -42,6 +42,7 @@
 				begin
 					outputMemoryBank[ALUMemAdd] = writeDataM ;  // Read F_PC = 0 --> first eight bits
 					$fdisplay(file,outputMemoryBank[ALUMemAdd]);  // Write the value to the file
+					$display("Wrote: %d to %d!",outputMemoryBank[ALUMemAdd],ALUMemAdd);
 				end
 			else if(readEn)
 				begin

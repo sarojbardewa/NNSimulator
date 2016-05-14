@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/i
+vmux32x2
+Z0 !s110 1463256918
+!i10b 1
+!s100 `c9?C;S[fdmdgU@N6B66P2
+I^@U_J99cEMcBnVmFd8Moc1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/New folder
+Z3 w1462561577
+Z4 8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v
+Z5 FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v
+L0 8
+Z6 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z7 !s108 1463256918.000000
+Z8 !s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v|
+!s101 -O0
+!i113 1
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vmux32x4
+R0
+!i10b 1
+!s100 ]^NX8WohSKhoD?NF3oFgJ1
+IHeNH7cOTjNAgKd42DmBg=1
+R1
+R2
+R3
+R4
+R5
+L0 19
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vmuxtester
+!s110 1463256917
+!i10b 1
+!s100 ];>OFSZj:RQMkdkj8kV`62
+IjXeJJ@79W7I^@ZLOL6?3P0
+R1
+R2
+R3
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexertester.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexertester.v
+L0 7
+R6
+r1
+!s85 0
+31
+!s108 1463256917.000000
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexertester.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexertester.v|
+!s101 -O0
+!i113 1
+R10

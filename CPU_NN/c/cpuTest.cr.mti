@@ -7,13 +7,13 @@ Top level modules:
 
 } {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
-Start time: 23:01:19 on May 13,2016
+Start time: 13:21:47 on May 14,2016
 vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v 
 -- Compiling module regfile
 
 Top level modules:
 	regfile
-End time: 23:01:19 on May 13,2016, Elapsed time: 0:00:00
+End time: 13:21:47 on May 14,2016, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
 } {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v}
@@ -23,26 +23,48 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	cpu
 
+} {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+Start time: 13:21:47 on May 14,2016
+vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v 
+-- Compiling module IFEX_Reg
+
+Top level modules:
+	IFEX_Reg
+End time: 13:21:47 on May 14,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
 } {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
-Start time: 23:01:19 on May 13,2016
+Start time: 13:21:46 on May 14,2016
 vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v 
 -- Compiling module cpu
 
 Top level modules:
 	cpu
-End time: 23:01:19 on May 13,2016, Elapsed time: 0:00:00
+End time: 13:21:46 on May 14,2016, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
 } {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
-Start time: 23:01:19 on May 13,2016
+Start time: 13:21:47 on May 14,2016
 vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v 
 -- Compiling module signEx
 
 Top level modules:
 	signEx
-End time: 23:01:19 on May 13,2016, Elapsed time: 0:00:00
+End time: 13:21:47 on May 14,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/ALU unit/aluUnit.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/ALU unit/aluUnit.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+Start time: 13:21:47 on May 14,2016
+vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/ALU unit/aluUnit.v 
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+End time: 13:21:47 on May 14,2016, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
 } {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/IFID_Reg.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/IFID_Reg.v}
@@ -54,24 +76,35 @@ Top level modules:
 
 } {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/IFID_Reg.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/IFID_Reg.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
-Start time: 23:01:19 on May 13,2016
+Start time: 13:21:46 on May 14,2016
 vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/IFID_Reg.v 
 -- Compiling module IFID_Reg
 
 Top level modules:
 	IFID_Reg
-End time: 23:01:19 on May 13,2016, Elapsed time: 0:00:00
+End time: 13:21:46 on May 14,2016, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
-} {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/controlUnit.v}} {1 {vlog -work work {C:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\CPU_NN\controlUnit.v}
+} {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/controlUnit.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/controlUnit.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
-Start time: 23:01:19 on May 13,2016
-vlog -reportprogress 300 -work work C:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\CPU_NN\controlUnit.v 
+Start time: 13:21:46 on May 14,2016
+vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/controlUnit.v 
 -- Compiling module controlUnit
 
 Top level modules:
 	controlUnit
-End time: 23:01:19 on May 13,2016, Elapsed time: 0:00:00
+End time: 13:21:47 on May 14,2016, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/instructMemoryModule.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/instructMemoryModule.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+Start time: 13:21:46 on May 14,2016
+vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/instructMemoryModule.v 
+-- Compiling module instructionMemory
+
+Top level modules:
+	instructionMemory
+End time: 13:21:46 on May 14,2016, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
 } {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/instructMemoryModule.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/instructMemoryModule.v}
@@ -80,24 +113,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	instructionMemory
-
-} {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/instructMemoryModule.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/instructMemoryModule.v}
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
-Start time: 23:01:18 on May 13,2016
-vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/instructMemoryModule.v 
--- Compiling module instructionMemory
-
-Top level modules:
-	instructionMemory
-End time: 23:01:19 on May 13,2016, Elapsed time: 0:00:01
-Errors: 0, Warnings: 0
-
-} {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v}
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module signEx
-
-Top level modules:
-	signEx
 
 } {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cputest.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cputest.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -108,20 +123,70 @@ Top level modules:
 
 } {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cputest.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cputest.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
-Start time: 23:01:19 on May 13,2016
+Start time: 13:21:46 on May 14,2016
 vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cputest.v 
 -- Compiling module cpuTest
 
 Top level modules:
 	cpuTest
-End time: 23:01:19 on May 13,2016, Elapsed time: 0:00:00
+End time: 13:21:46 on May 14,2016, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
-} {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/controlUnit.v} {1 {vlog -work work -stats=none {C:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\CPU_NN\controlUnit.v}
+} {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IFEX_Reg
+
+Top level modules:
+	IFEX_Reg
+
+} {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module signEx
+
+Top level modules:
+	signEx
+
+} {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/controlUnit.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/controlUnit.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module controlUnit
 
 Top level modules:
 	controlUnit
+
+} {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/ALU unit/aluUnit.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/ALU unit/aluUnit.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer_6bits.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer_6bits.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux32x2_6bits
+-- Compiling module mux32x4
+
+Top level modules:
+	mux32x2_6bits
+	mux32x4
+
+} {} {}} {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v} {1 {vlog -work work -stats=none {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux32x2
+-- Compiling module mux32x4
+
+Top level modules:
+	mux32x4
+
+} {} {}} {{C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v}} {1 {vlog -work work {C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+Start time: 13:21:47 on May 14,2016
+vlog -reportprogress 300 -work work C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/Multiplexer/multiplexer.v 
+-- Compiling module mux32x2
+-- Compiling module mux32x4
+
+Top level modules:
+	mux32x4
+End time: 13:21:47 on May 14,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
 } {} {}}

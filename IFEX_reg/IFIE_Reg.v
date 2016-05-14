@@ -52,6 +52,8 @@ module IFEX_Reg(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,Me
 	output  reg [REGISTER-1:0] Rt;
 	output  reg [REGISTER-1:0] Rd;
 	
+	initial PCEn = 0;
+	
 	always @(posedge CLK)
 		begin
 			PCEn		<= PCEnD;

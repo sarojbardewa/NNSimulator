@@ -9,13 +9,13 @@ z2
 cModel Technology
 dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/c
 vIFEX_Reg
-Z0 !s110 1463210494
+Z0 !s110 1463249006
 !i10b 1
-!s100 d;MT@QXm9URiJc@WeY4=f2
-I:0<EbJ;;K8JmR7G:2PNm^0
+!s100 O;H01C;m8el57>>b^iBKL3
+I_7a35QRmOQgAX]Y7U5k@L1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/i
-w1463210143
+w1463248454
 8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v
 FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v
 L0 1
@@ -23,7 +23,7 @@ Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1463210494.000000
+Z4 !s108 1463249006.000000
 !s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v|
 !s101 -O0
@@ -52,3 +52,45 @@ R4
 !i113 1
 R5
 n@i@f@i@etest
+vregfile
+Z6 !s110 1463249007
+!i10b 1
+!s100 OEZG8ETVE`9VUV6f2a?K`1
+IdUiTICNmI0e01bQ^cLKb=2
+R1
+R2
+w1463243691
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v
+L0 11
+R3
+r1
+!s85 0
+31
+Z7 !s108 1463249007.000000
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v|
+!s101 -O0
+!i113 1
+R5
+vregfiletester
+R6
+!i10b 1
+!s100 ^:>^2P>zKAzko1hO<JBBI1
+IQ[2zFg58;i>d_6MV<UOSQ0
+R1
+R2
+w1462818076
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/RegesterFile/regfile_tester.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/RegesterFile/regfile_tester.v
+L0 7
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/RegesterFile/regfile_tester.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/RegesterFile/regfile_tester.v|
+!s101 -O0
+!i113 1
+R5
