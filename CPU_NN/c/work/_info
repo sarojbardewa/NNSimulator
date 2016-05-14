@@ -8,29 +8,51 @@ z2
 !i10f 100
 cModel Technology
 dC:/Modeltech_pe_edu_10.4a/examples
-vcpu
-Z0 !s110 1463017320
+vcontrolUnit
+Z0 !s110 1463205954
 !i10b 1
-!s100 XZm2jci[V[jTcQRi_bdWf2
-IQB28>YhL1RSVHlj^:KCZk0
+!s100 2YmL6NCo9o65g71W;:N8Q3
+ID_hOkRALm1DZo9HHBMHRZ0
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/c
-w1463017303
-8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v
-FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v
-L0 1
+w1463205643
+8C:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\CPU_NN\controlUnit.v
+FC:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\CPU_NN\controlUnit.v
+L0 7
 Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1463017320.000000
+Z4 !s108 1463205954.000000
+!s107 C:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\CPU_NN\controlUnit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Saroj\OneDrive\Spring 2016\ECE586\ArtificialNN\NNSimulator\CPU_NN\controlUnit.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+ncontrol@unit
+vcpu
+R0
+!i10b 1
+!s100 W9QZJ[FWW:JP9>A1;0=Ng3
+IoY>;i^K;43:Dmd:65B2_K2
+R1
+R2
+w1463205939
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
 !s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cpu.v|
 !s101 -O0
 !i113 1
-Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+R5
 vcpuTest
-R0
+Z6 !s110 1463205953
 !i10b 1
 !s100 HAEbjZld@3>>BA[ad[d6f0
 IYB2Bf:Wm5AQMUzLLGilh`0
@@ -44,7 +66,7 @@ R3
 r1
 !s85 0
 31
-R4
+Z7 !s108 1463205953.000000
 !s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cputest.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/cputest.v|
 !s101 -O0
@@ -74,7 +96,7 @@ R4
 R5
 n@i@f@i@d_@reg
 vinstructionMemory
-R0
+R6
 !i10b 1
 !s100 V:hR`6bnD]AhlMR=RmdcI1
 Im9nU]S8RFGaLckGYLlGGE3
@@ -88,10 +110,53 @@ R3
 r1
 !s85 0
 31
-R4
+R7
 !s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/instructMemoryModule.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/instructMemoryModule.v|
 !s101 -O0
 !i113 1
 R5
 ninstruction@memory
+vregfile
+R0
+!i10b 1
+!s100 1;_FUn[2;Nl`62?2a9;Md0
+IE]Vni:MIAfPfeY]PVX_6f2
+R1
+R2
+w1462818076
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v
+L0 11
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/regfile.v|
+!s101 -O0
+!i113 1
+R5
+vsignEx
+R0
+!i10b 1
+!s100 ?04KURo^^:@:N^?Ro@0Kg0
+IGBLVEk`kP0ieZNa[E3V5P1
+R1
+R2
+w1462826832
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v
+L0 13
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/signExtender.v|
+!s101 -O0
+!i113 1
+R5
+nsign@ex

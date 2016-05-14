@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/c
+vIFEX_Reg
+Z0 !s110 1463210494
+!i10b 1
+!s100 d;MT@QXm9URiJc@WeY4=f2
+I:0<EbJ;;K8JmR7G:2PNm^0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/i
+w1463210143
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v
+L0 1
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1463210494.000000
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFIE_Reg.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@i@f@e@x_@reg
+vIFIEtest
+R0
+!i10b 1
+!s100 5h:oe3BWi_0@Z=9H^fYdH0
+IAIn1IgYW0_Cl1V98`gUek1
+R1
+R2
+w1463210471
+8C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFEX_Test.v
+FC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFEX_Test.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFEX_Test.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/IFEX_reg/IFEX_Test.v|
+!s101 -O0
+!i113 1
+R5
+n@i@f@i@etest
