@@ -1,0 +1,79 @@
+C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/signExtender.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/signExtender.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module signEx
+
+Top level modules:
+	signEx
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cputest.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cputest.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module cpuTest
+
+Top level modules:
+	cpuTest
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/controlUnit.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/controlUnit.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module controlUnit
+
+Top level modules:
+	controlUnit
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer_6bits.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer_6bits.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux32x2_6bits
+
+Top level modules:
+	mux32x2_6bits
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/aluUnit.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/aluUnit.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/dataMemory.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/dataMemory.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dataMemory
+
+Top level modules:
+	dataMemory
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux32x2
+-- Compiling module mux32x4
+
+Top level modules:
+	mux32x4
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/regfile.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/regfile.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFID_Reg.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFID_Reg.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IFID_Reg
+
+Top level modules:
+	IFID_Reg
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFIE_Reg.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFIE_Reg.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IFEX_Reg
+
+Top level modules:
+	IFEX_Reg
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemoryModule.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemoryModule.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module instructionMemory
+
+Top level modules:
+	instructionMemory
+
+} {} {}}

@@ -18,7 +18,7 @@ input [size_in - 1:0] valin;
 output [size_out - 1:0] extended;
 
 wire [size_in - 1:0] valin;
-
+reg [size_out - 1:0] extended;
 
 assign  extended[size_out - 1:0] = { {( size_out - size_in ){valin[size_in-1]}}, valin[size_in-1:0] };
 

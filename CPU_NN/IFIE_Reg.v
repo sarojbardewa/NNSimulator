@@ -3,8 +3,10 @@ module IFEX_Reg(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,Me
 
 	parameter BUS_WIDTH=32;
 	parameter ALU_FUNCT_BITS = 3;  // For Alu operations
+	parameter REGISTER_SIZE = 6;
 	
 	// Register Files Input and output
+	input CLK;	
 	input [BUS_WIDTH-1:0]Src1AD;
 	input [BUS_WIDTH-1:0]Src1BD;
 	input [BUS_WIDTH-1:0]Src1CD;
@@ -24,8 +26,8 @@ module IFEX_Reg(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,Me
 	input MemtoRegD;
 	
 	//Write Reg
-	input RtD;
-	input RdD;
+	input[REGISTER_SIZE-1:0] RtD;
+	input [REGISTER_SIZE-1:0]RdD;
 
 	// Register Files Input and output
 	output  reg [BUS_WIDTH-1:0]Src1A;
@@ -47,8 +49,8 @@ module IFEX_Reg(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,Me
 	output  reg MemtoReg;
 	
 	//Write Reg
-	output  reg Rt;
-	output  reg Rd;
+	output  reg [REGISTER_SIZE-1:0] Rt;
+	output  reg [REGISTER_SIZE-1:0]Rd;
 	
 	always @(posedge CLK)
 		begin
@@ -72,4 +74,3 @@ endmodule
 			
 			
 			
-		end
