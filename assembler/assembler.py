@@ -260,8 +260,8 @@ def output_command( sline ):
 
   command = 0x00000000
   field_order = [opcode_shift_amount,
-                 rs_shift_amount,
                  rt_shift_amount,
+                 rs_shift_amount,
                  rd_shift_amount]
   arglen = len(argsin)
 
