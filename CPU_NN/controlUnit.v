@@ -62,7 +62,7 @@ case (opcode)
         ALUControl1 <= 'b000;
         ALUControl2 <= 'b111;
         ALUSrc <= 1;
-        RegDst <= 1;
+        RegDst <= 0;
 		PCEn <= 1;
 		MemRead <= 0;
   end

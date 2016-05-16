@@ -259,10 +259,25 @@ def output_command( sline ):
 # print argsin[0]
 
   command = 0x00000000
-  field_order = [opcode_shift_amount,
+
+  #I-type instruction
+  if ((argsin[0] == "ADDI") | (argsin[0] == "LD") | (argsin[0] == "ST")):
+      field_order = [opcode_shift_amount,
                  rt_shift_amount,
                  rs_shift_amount,
                  rd_shift_amount]
+  #R-type instruction
+  else:
+      field_order = [opcode_shift_amount,
+                 rd_shift_amount,
+                 rs_shift_amount,
+                 rt_shift_amount]
+  
+#  field_order = [opcode_shift_amount,
+#                 rt_shift_amount,
+#                 rs_shift_amount,
+#                 rd_shift_amount]
+
   arglen = len(argsin)
 
   for field in range(arglen):
