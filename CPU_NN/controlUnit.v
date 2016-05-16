@@ -111,8 +111,8 @@ case (opcode)
         ALUControl2 <= 'b111; 	// Noting to do for ALU2
         ALUSrc <= 1;     		// We add immediate values, so it should be 1
         RegDst <= 0;	 		// Select Rt for I-type instruction
-		PCEn <= 1;				// Keep loading PC
-		MemRead <= 1;			// Read from memory
+    		PCEn <= 1;				// Keep loading PC
+    		MemRead <= 1;			// Read from memory
   end
   4'b1111 : //ST  
   begin
@@ -123,8 +123,8 @@ case (opcode)
         ALUControl2 <= 'b111;	// Nothing to do for ALU2
         ALUSrc <= 1;			// Select Immediate value
         RegDst <= 0;  			// Select Rt for I-type but does not matter here
-		PCEn <= 1;    			// Always enable PC
-		MemRead <= 0; 			// Nothing to read
+	    	PCEn <= 1;    			// Always enable PC
+	    	MemRead <= 0; 			// Nothing to read
   end
   4'b1011 : //HALT
   begin

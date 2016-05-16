@@ -16,12 +16,16 @@ wire [2:0] ALUControl1;
 wire [2:0] ALUControl2;
 wire ALUSrc;
 wire RegDst;
+wire PCEn;
+wire MemRead;
 
-controlUnit CU_1(opcode, RegWrite, MemtoReg, MemWrite, ALUControl1, ALUControl2, ALUSrc, RegDst);
+controlUnit CU_1(opcode, RegWrite, MemtoReg, MemWrite, ALUControl1, ALUControl2, ALUSrc, RegDst, PCEn, MemRead);
 
 initial 
   begin
     opcode = 'h1;
+    #4
+    opcode = 'h9;
     #4
     opcode = 'h2;
     #4
@@ -32,6 +36,8 @@ initial
     opcode = 'hE;
     #4
     opcode = 'hF;
+    #4
+    opcode = 'hB;
     #4;
   end    
 endmodule
