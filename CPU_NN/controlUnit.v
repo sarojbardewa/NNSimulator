@@ -39,8 +39,8 @@ case (opcode)
         ALUControl2 <= 'b111;
         ALUSrc <= 0;
         RegDst <= 0;
-		PCEn <= 1;
-		MemRead <= 0;
+        PCEn <= 1;
+        MemRead <= 0;
   end
   4'b0001 : //ADD
   begin
@@ -51,8 +51,8 @@ case (opcode)
         ALUControl2 <= 'b111;
         ALUSrc <= 0;
         RegDst <= 1;
-		PCEn <= 1;
-		MemRead <= 0;
+        PCEn <= 1;
+        MemRead <= 0;
   end
   4'b1001 : //ADDI
   begin
@@ -63,8 +63,8 @@ case (opcode)
         ALUControl2 <= 'b111;
         ALUSrc <= 1;
         RegDst <= 0;
-		PCEn <= 1;
-		MemRead <= 0;
+        PCEn <= 1;
+        MemRead <= 0;
   end
   4'b0010 : //MUL
   begin
@@ -75,8 +75,8 @@ case (opcode)
         ALUControl2 <= 'b111;
         ALUSrc <= 0;
         RegDst <= 1;
-		PCEn <= 1;
-		MemRead <= 0;
+        PCEn <= 1;
+        MemRead <= 0;
   end
   4'b0011 : //SINN 
   begin
@@ -87,8 +87,8 @@ case (opcode)
         ALUControl2 <= 'b111; 
         ALUSrc <= 0;
         RegDst <= 1;
-		PCEn <= 1;
-		MemRead <= 0; 
+        PCEn <= 1;
+        MemRead <= 0; 
   end
   4'b0100 : //MAC
   begin
@@ -99,8 +99,8 @@ case (opcode)
         ALUControl2 <= 'b000;	// ADD
         ALUSrc <= 0;			// Select from SrcB = 0
         RegDst <= 1;			// Select Rd = 1 for R-type instruction
-		PCEn <= 1;				// Always enable PC
-		MemRead <= 0;			// Nothing to read from memory
+        PCEn <= 1;				// Always enable PC
+        MemRead <= 0;			// Nothing to read from memory
   end
   4'b1110 : //LD
   begin
@@ -111,8 +111,8 @@ case (opcode)
         ALUControl2 <= 'b111; 	// Noting to do for ALU2
         ALUSrc <= 1;     		// We add immediate values, so it should be 1
         RegDst <= 0;	 		// Select Rt for I-type instruction
-    		PCEn <= 1;				// Keep loading PC
-    		MemRead <= 1;			// Read from memory
+        PCEn <= 1;				// Keep loading PC
+        MemRead <= 1;			// Read from memory
   end
   4'b1111 : //ST  
   begin
@@ -123,8 +123,8 @@ case (opcode)
         ALUControl2 <= 'b111;	// Nothing to do for ALU2
         ALUSrc <= 1;			// Select Immediate value
         RegDst <= 0;  			// Select Rt for I-type but does not matter here
-	    	PCEn <= 1;    			// Always enable PC
-	    	MemRead <= 0; 			// Nothing to read
+        PCEn <= 1;    			// Always enable PC
+        MemRead <= 0; 			// Nothing to read
   end
   4'b1011 : //HALT
   begin
