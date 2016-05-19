@@ -27,7 +27,7 @@ reg ALUSrc;
 reg RegDst;
 reg PCEn;
 
-initial PCEn = 0;
+initial PCEn = 1;
 always @(opcode)
 case (opcode)
   4'b0000 : //NOP

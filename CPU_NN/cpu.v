@@ -47,9 +47,6 @@ module cpu(CLK,CLK_cycle);
 	wire [REGISTER-1:0]RtD,Rt;
 	wire [REGISTER-1:0]RdD,Rd;
 	
-	//Execute Unit
-	wire [REGISTER-1:0] writeDstReg;
-
 	//Execution Unit
 	wire [BUS_WIDTH-1:0]Src1B1;  //Output of ALUSrc Mux
 	wire [BUS_WIDTH-1:0]ALUOut1, ALUOut2; //Output of ALU1
@@ -76,12 +73,12 @@ module cpu(CLK,CLK_cycle);
 	assign A1 = InstrD[27:22];
 	assign A2 = InstrD[21:16];
 	assign A3 = InstrD[15:10];
-	assign A4 = writeDstReg;
+	assign A4 = WriteDstReg;
 	assign SignImmIn = InstrD[IMMEDIATE-1:0];
 	assign RtD = InstrD[21:16];
 	assign RdD = InstrD[15:10];
 	assign WriteData = Src1B;
-	assign Result 	 = WD3;
+	assign WD3	 = Result;
 	
 	
 	always@(posedge CLK)
@@ -122,7 +119,7 @@ module cpu(CLK,CLK_cycle);
 	
 	//Control Unit
 	controlUnit ArtNNControlUnit(.opcode(OP), .RegWrite(RegWriteD), .MemtoReg(MemtoRegD), .MemWrite(MemWriteD), .ALUControl1(ALU1CntrlD),
-                .ALUControl2(ALU2CntrlD), .ALUSrc(ALU1SrcD),.RegDst(RegDstD),.PCEn(PCEnD),.MemRead(MemRead));
+                .ALUControl2(ALU2CntrlD), .ALUSrc(ALU1SrcD),.RegDst(RegDstD),.PCEn(PCEnD),.MemRead(MemReadD));
 	
 	// ID_EX Register
 	IFEX_Reg ArtNNIFEXRegUnit(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,MemWriteD,MemReadD,MemtoRegD,Src1AD,Src1BD,Src1CD,RtD,RdD,SignImmD,

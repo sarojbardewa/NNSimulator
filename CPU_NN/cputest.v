@@ -7,7 +7,8 @@ module cpuTest;
 	initial CLK = 0;
 	always 
 		begin
-		#20	CLK <= ~CLK;
+			CLK = ~CLK;
+			#20;
 		end
 	
 	initial
