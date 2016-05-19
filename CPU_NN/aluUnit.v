@@ -16,22 +16,22 @@ output[nBits-1:0] ALUResult;
 
 reg[nBits-1:0] ALUResult;
 
-
+/*
 initial begin 
         ALUResult = 32'd0; 
 end 
-
- always@(ALUControl,SrcA,SrcB) 
+*/
+ always@(ALUControl) 
  begin
 	case(ALUControl)
 		3'b000:        //Add the data(add)
-             ALUResult <= SrcA+SrcB;
+             ALUResult = SrcA+SrcB;
 		3'b001:		 //Multiply the data (mul)
-			 ALUResult <= SrcA*SrcB; 
+			 ALUResult = SrcA*SrcB; 
 		3'b010:		// Set if non-negative
-			 ALUResult <= (SrcA>=SrcB) ? 32'b1:32'b0;   //Src A = -2; SrcB = R0 = 0; The SrcA<SrcB = 0
+			 ALUResult = (SrcA>=SrcB) ? 32'b1:32'b0;   //Src A = -2; SrcB = R0 = 0; The SrcA<SrcB = 0
 		3'b111:		// No nothing		
-			 ALUResult <= SrcA;   
+			 ALUResult = SrcA;   
 			 
 		default:   	
 			ALUResult = 32'd0;

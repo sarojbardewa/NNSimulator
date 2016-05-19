@@ -53,13 +53,13 @@ module cpu(CLK,CLK_cycle);
 	wire [BUS_WIDTH-1:0] WriteData;
 	wire [BUS_WIDTH-1:0] RdDataM;
 	wire [BUS_WIDTH-1:0] Result;
-	
+	reg [BUS_WIDTH-1:0] ALU2SrcA;
 	//-------------------------------------------------------------
 	//IF initial
 	initial begin
 		PC = 0;
 		CLK_cycle = 0;
-		InstrD = 32'b0;
+	//	InstrD = 32'b0;
 	//	PCEn = 0; 
 	end
 
@@ -79,7 +79,8 @@ module cpu(CLK,CLK_cycle);
 	assign RdD = InstrD[15:10];
 	assign WriteData = Src1B;
 	assign WD3	 = Result;
-	
+	always@(ALUOut1) 
+		ALU2SrcA = ALUOut1;
 	
 	always@(posedge CLK)
 		CLK_cycle = CLK_cycle + 1;
@@ -132,15 +133,15 @@ module cpu(CLK,CLK_cycle);
 	mux32x2 ArtNNMux_ALU1Src(.in0(Src1B), .in1(SignImm),.select(ALU1Src),.out(Src1B1));
 	
 	// ALU1
-	ALU ALU1(.ALUResult(ALUOut1),.ALUControl(ALU1Cntrl),.SrcA(Src1A),.SrcB(Src1B));
+	ALU ALU1(.ALUResult(ALUOut1),.ALUControl(ALU1Cntrl),.SrcA(Src1A),.SrcB(Src1B1));
 	
 	//ALU2
-	ALU ALU2(.ALUResult(ALUOut2),.ALUControl(ALU2Cntrl),.SrcA(ALUOut1),.SrcB(Src1C));
-	
+	ALU ALU2(.ALUResult(ALUOut2),.ALUControl(ALU2Cntrl),.SrcA(ALU2SrcA),.SrcB(Src1B1)); //ALU2Cntrl  Src1C
+
 	//Data Memory
 	dataMemory ArtNN_DataMem(.CLK(CLK),.writeEn(MemWrite),.readEn(MemRead),.ALUMemAdd(ALUOut2),.writeDataM(WriteData),.readDataW(RdDataM));
 	
 	// 2 input Write Back Mux to select DataMemory or ALUOut2
-	mux32x2 ArtNNMux_WB(.in0(RdDataM), .in1(ALUOut2),.select(MemtoReg),.out(Result));
+	mux32x2 ArtNNMux_WB(.in0(0), .in1(ALUOut2),.select(MemtoReg),.out(Result));   // RdDataM=0
 endmodule
 
