@@ -1,0 +1,105 @@
+INPUT_VAL_ADDR
+HIDDEN_VAL_ADDR
+OUTPUT_VAL_ADDR
+
+INPUT_WEIGHT_ADDR
+HIDDEN_WEIGHT_ADDR
+OUTPUT_WEIGHT_ADDR
+
+NUM_INPUT
+NUM_HIDDEN
+NUM_OUTPUT
+
+
+
+ADDI,R11,R0,#INPUT_VAL_ADDR      //R11 gets memory base address of input values
+ADDI,R12,R0,#INPUT_WEIGHT_ADDR   //R12 gets memory base address of input weights
+ADDI,R13,R0,#HIDDEN_VAL_ADDR     //R13 gets memory base address of hidden values
+ADDI,R14,R0,#HIDDEN_WEIGHT_ADDR
+ADDI,R15,R0,#OUTPUT_VAL_ADDR
+ADDI,R16,R0,#OUTPUT_WEIGHT_ADDR  //
+ADDI,R3,R0,#0                    //Zero out R3 (adds instruction, but makes more readable code later:use MAC for everything.)
+
+
+	//Claculate first hidden node
+
+LD,R1,R11,#0                     //load R1 with first input value
+LD,R2,R12,#0                     //load R2 with first input weight
+MAC,R3,R1,R2 
+
+
+LD,R1,R11,#1                     //load R1 with second input value
+LD,R2,R12,#1                     //load R2 with second input weight
+MAC,R3,R1,R2 
+
+.
+.
+.
+
+LD,R1,R11,#NUM_INPUT-1           //load R1 with final input value
+LD,R2,R12,#NUM_INPUT-1           //load R2 with final input weight
+MAC,R3,R1,R2 
+
+SINN,R3,R3 #0
+ST,R3,#HIDDEN_VAL_ADDR
+ADDI,R3,R0,#0                    //Zero out R3 (adds instruction, but makes more readable code later:use MAC for everything.)
+
+	//Claculate second hidden node
+
+LD,R1,R11,#0                     //load R1 with first input value
+LD,R2,R12,#NUM_INPUT             //load R2 with first input weight
+MAC,R3,R1,R2 
+
+
+LD,R1,R11,#1                     //load R1 with second input value
+LD,R2,R12,#NUM_INPUT+1           //load R2 with second input weight
+MAC,R3,R1,R2 
+
+.
+.
+.
+
+LD,R1,R11,#NUM_INPUT-1           //load R1 with final input value
+LD,R2,R12,#2*NUM_INPUT-1         //load R2 with final input weight
+MAC,R3,R1,R2 
+
+
+SINN,R3,R3
+ST,R3,#HIDDEN_VAL_ADDR+1
+ADDI,R3,R0,#0
+
+.
+.
+.
+
+.
+.
+.
+
+
+	calculate final hidden node
+
+LD,R1,R11,#0                       //load R1 with first input value
+LD,R2,R12,#NUM_INPUT^2-NUM_INPUT   //load R2 with first input weight
+MAC,R3,R1,R2 
+
+
+LD,R1,R11,#1                       //load R1 with second input value
+LD,R2,R12,#NUM_INPUT^2-NUM_INPUT+1 //load R2 with second input weight
+MAC,R3,R1,R2 
+
+.
+.
+.
+
+LD,R1,R11,#NUM_INPUT-1             //load R1 with final input value
+LD,R2,R12,#NUM_INPUT^2-1           //load R2 with final input weight
+MAC,R3,R1,R2 
+
+
+SINN,R3,R3
+ST,R3,#HIDDEN_VAL_ADDR+1
+ADDI,R3,R0,#0
+
+
+//now calculate value of each output node
