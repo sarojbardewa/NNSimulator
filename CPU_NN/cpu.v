@@ -131,17 +131,18 @@ module cpu(CLK,CLK_cycle);
 	
 	// 2 input mux to select ALU1 Source
 	mux32x2 ArtNNMux_ALU1Src(.in0(Src1B), .in1(SignImm),.select(ALU1Src),.out(Src1B1));
-	
+	/*
 	// ALU1
 	ALU ALU1(.ALUResult(ALUOut1),.ALUControl(ALU1Cntrl),.SrcA(Src1A),.SrcB(Src1B1));
 	
 	//ALU2
 	ALU ALU2(.ALUResult(ALUOut2),.ALUControl(ALU2Cntrl),.SrcA(ALU2SrcA),.SrcB(Src1B1)); //ALU2Cntrl  Src1C
-
+	*/
+	ALU_Parent ALU_Parent1(.ALUResult(ALUOut2),.ALU1Control(ALU1Cntrl),.ALU2Control(ALU2Cntrl),.SrcA(Src1A),.SrcB(Src1B1),.SrcC(Src1C));
 	//Data Memory
 	dataMemory ArtNN_DataMem(.CLK(CLK),.writeEn(MemWrite),.readEn(MemRead),.ALUMemAdd(ALUOut2),.writeDataM(WriteData),.readDataW(RdDataM));
 	
 	// 2 input Write Back Mux to select DataMemory or ALUOut2
-	mux32x2 ArtNNMux_WB(.in0(0), .in1(ALUOut2),.select(MemtoReg),.out(Result));   // RdDataM=0
+	mux32x2 ArtNNMux_WB(.in0(RdDataM), .in1(ALUOut2),.select(MemtoReg),.out(Result));
 endmodule
 

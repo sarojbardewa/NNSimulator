@@ -29,6 +29,9 @@ module regfile ( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, r
 	
 	// As soon as you supply address, read them! But, the value might not be written
 	// yet! Hence we will have to have clock
+	initial 
+		regfile[0] = 32'h00000000;
+	
    assign rdDataA = rdAddrA ? regfile[rdAddrA] : 32'h00000000;
    assign rdDataB = rdAddrB ? regfile[rdAddrB] : 32'h00000000;
    assign rdDataC = rdAddrC ? regfile[rdAddrC] : 32'h00000000; 
