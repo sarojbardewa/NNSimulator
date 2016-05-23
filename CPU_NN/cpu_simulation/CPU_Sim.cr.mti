@@ -19,6 +19,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	signEx
 
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/controlUnit.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/controlUnit.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module controlUnit
+
+Top level modules:
+	controlUnit
+
 } {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/aluUnit.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/aluUnit.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module ALU
@@ -47,12 +54,26 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	regfile
 
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cpu.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cpu.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
 } {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFID_Reg.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFID_Reg.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module IFID_Reg
 
 Top level modules:
 	IFID_Reg
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFIE_Reg.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFIE_Reg.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IFEX_Reg
+
+Top level modules:
+	IFEX_Reg
 
 } {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemoryModule.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemoryModule.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

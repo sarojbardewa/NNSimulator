@@ -45,15 +45,7 @@
 					$fdisplay(file,outputMemoryBank[ALUMemAdd]);  // Write the value to the file
 					$display("Wrote: %d to %d!",outputMemoryBank[ALUMemAdd],ALUMemAdd);
 				end
-			/*
-			else if(readEn)
-				begin
-					readDataW = dataMemoryBank[ALUMemAdd]; //+DATA_BASE_ADD];  //Read from an address and output the data
-				$display("Read %d from the Address: %d",readDataW,ALUMemAdd);
-				end */
-		//	else
-			//	$display("No Memory Access!");
-			end
+		end
 		
 endmodule
 	
