@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/c
 vALU_Child
-Z0 !s110 1463963988
+Z0 !s110 1464047087
 !i10b 1
 !s100 ^T5;?_cSb2Nf34SDVfMN]3
 ImjM9TXV=Qf:5YionjDVa?2
@@ -23,7 +23,7 @@ Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1463963988.000000
+Z4 !s108 1464047087.000000
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU_Child.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU_Child.v|
 !s101 -O0
@@ -53,7 +53,7 @@ R4
 R5
 n@a@l@u_@parent
 vcontrolUnit
-Z6 !s110 1463963986
+Z6 !s110 1464047085
 !i10b 1
 !s100 iAOc8f?Lh84O33LPL57bF2
 I97ZJYJiY1`2ZM_Xb]iEAO1
@@ -67,7 +67,7 @@ R3
 r1
 !s85 0
 31
-Z7 !s108 1463963986.000000
+Z7 !s108 1464047085.000000
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/controlUnit.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/controlUnit.v|
 !s101 -O0
@@ -118,13 +118,13 @@ R7
 R5
 ncpu@test
 vdataMemory
-Z8 !s110 1463963987
+Z8 !s110 1464047086
 !i10b 1
-!s100 dALo0CgVceoe@dk<9Mma:3
-IQ;6BTHF?^;DZb69aR27=H2
+!s100 gN[2dE:6eVXZjKVn:F1:=2
+IQ:7=DML4ATOC=3FLkKK]:2
 R1
 R2
-w1463963799
+w1463964400
 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/dataMemory.v
 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/dataMemory.v
 L0 14
@@ -132,7 +132,7 @@ R3
 r1
 !s85 0
 31
-R7
+Z9 !s108 1464047086.000000
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/dataMemory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/dataMemory.v|
 !s101 -O0
@@ -154,7 +154,7 @@ R3
 r1
 !s85 0
 31
-Z9 !s108 1463963987.000000
+R9
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFIE_Reg.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFIE_Reg.v|
 !s101 -O0
@@ -290,7 +290,7 @@ R9
 !i113 1
 R5
 vsignEx
-R0
+R8
 !i10b 1
 !s100 `6C:kS4IZgl4mZfEz`c@;2
 I^aBVF;TJhDRcdM@]_0f2=1
@@ -304,7 +304,7 @@ R3
 r1
 !s85 0
 31
-R4
+R9
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/signExtender.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/signExtender.v|
 !s101 -O0
