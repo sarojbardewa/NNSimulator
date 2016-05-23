@@ -41,7 +41,6 @@ module cpu(CLK,CLK_cycle);
 	wire [ALU_FUNCT_BITS-1:0]ALU1CntrlD,ALU1Cntrl;
 	wire [ALU_FUNCT_BITS-1:0]ALU2CntrlD,ALU2Cntrl;
 	wire MemWriteD,MemWrite;
-	wire MemReadD,MemRead;
 	wire MemtoRegD,MemtoReg;
 	wire PCEnD,PCEn;
 	wire [REGISTER-1:0]RtD,Rt;
@@ -53,7 +52,6 @@ module cpu(CLK,CLK_cycle);
 	wire [BUS_WIDTH-1:0] WriteData;
 	wire [BUS_WIDTH-1:0] RdDataM;
 	wire [BUS_WIDTH-1:0] Result;
-	reg [BUS_WIDTH-1:0] ALU2SrcA;
 	//-------------------------------------------------------------
 	//IF initial
 	initial begin
@@ -79,9 +77,8 @@ module cpu(CLK,CLK_cycle);
 	assign RdD = InstrD[15:10];
 	assign WriteData = Src1B;
 	assign WD3	 = Result;
-	always@(ALUOut1) 
-		ALU2SrcA = ALUOut1;
 	
+
 	always@(posedge CLK)
 		CLK_cycle = CLK_cycle + 1;
 	
@@ -100,15 +97,9 @@ module cpu(CLK,CLK_cycle);
 	
 	always@(posedge CLK)
 		begin 
-		//	if(~PCEn)       		// If PC is not enabled, then insert a bubble
-		//		InstrD = 32'b0;  // If PC is disabled insert a bubble
-		//	else
 				InstrD = Instr;
+				
 		end
-	// IF Pipeline register
-	
-
-
 	// Instantiate Register File
 	regfile ArtNNRegisterUnit(.clk(CLK),.writeEnable(RegWrite),.wrAddr(A4),.wrData(WD3),
 					  .rdAddrA(A1),.rdDataA(Src1AD),.rdAddrB(A2),.rdDataB(Src1BD),
@@ -120,27 +111,23 @@ module cpu(CLK,CLK_cycle);
 	
 	//Control Unit
 	controlUnit ArtNNControlUnit(.opcode(OP), .RegWrite(RegWriteD), .MemtoReg(MemtoRegD), .MemWrite(MemWriteD), .ALUControl1(ALU1CntrlD),
-                .ALUControl2(ALU2CntrlD), .ALUSrc(ALU1SrcD),.RegDst(RegDstD),.PCEn(PCEnD),.MemRead(MemReadD));
+                .ALUControl2(ALU2CntrlD), .ALUSrc(ALU1SrcD),.RegDst(RegDstD),.PCEn(PCEnD));
 	
 	// ID_EX Register
-	IFEX_Reg ArtNNIFEXRegUnit(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,MemWriteD,MemReadD,MemtoRegD,Src1AD,Src1BD,Src1CD,RtD,RdD,SignImmD,
-					PCEn,RegWrite,ALU1Src, RegDst,ALU1Cntrl, ALU2Cntrl,MemWrite,MemRead,MemtoReg,Src1A,Src1B,Src1C,Rt,Rd,SignImm);
+	IFEX_Reg ArtNNIFEXRegUnit(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,MemWriteD,MemtoRegD,Src1AD,Src1BD,Src1CD,RtD,RdD,SignImmD,
+					PCEn,RegWrite,ALU1Src, RegDst,ALU1Cntrl, ALU2Cntrl,MemWrite,MemtoReg,Src1A,Src1B,Src1C,Rt,Rd,SignImm);
 	
 	// 2 input mux to select write Destination Register
 	mux32x2_6bits ArtNNMux_RegDest(.in0(Rt), .in1(Rd),.select(RegDst),.out(WriteDstReg));
 	
 	// 2 input mux to select ALU1 Source
 	mux32x2 ArtNNMux_ALU1Src(.in0(Src1B), .in1(SignImm),.select(ALU1Src),.out(Src1B1));
-	/*
-	// ALU1
-	ALU ALU1(.ALUResult(ALUOut1),.ALUControl(ALU1Cntrl),.SrcA(Src1A),.SrcB(Src1B1));
+
+	ALU_Parent ALU1(.ALUResult(ALUOut1),.ALU1Control(ALU1Cntrl),.SrcA(Src1A),.SrcB(Src1B1));
 	
-	//ALU2
-	ALU ALU2(.ALUResult(ALUOut2),.ALUControl(ALU2Cntrl),.SrcA(ALU2SrcA),.SrcB(Src1B1)); //ALU2Cntrl  Src1C
-	*/
-	ALU_Parent ALU_Parent1(.ALUResult(ALUOut2),.ALU1Control(ALU1Cntrl),.ALU2Control(ALU2Cntrl),.SrcA(Src1A),.SrcB(Src1B1),.SrcC(Src1C));
+	ALU_Child ALU_Child1(.ALUResult(ALUOut2),.ALUResult1(ALUOut1),.ALU2Control(ALU2Cntrl),.SrcC(Src1C));
 	//Data Memory
-	dataMemory ArtNN_DataMem(.CLK(CLK),.writeEn(MemWrite),.readEn(MemRead),.ALUMemAdd(ALUOut2),.writeDataM(WriteData),.readDataW(RdDataM));
+	dataMemory ArtNN_DataMem(.CLK(CLK),.writeEn(MemWrite),.ALUMemAdd(ALUOut2),.writeDataM(WriteData),.readDataW(RdDataM));
 	
 	// 2 input Write Back Mux to select DataMemory or ALUOut2
 	mux32x2 ArtNNMux_WB(.in0(RdDataM), .in1(ALUOut2),.select(MemtoReg),.out(Result));

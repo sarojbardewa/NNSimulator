@@ -11,7 +11,7 @@
  // readEn is added, which controls reading of data from the module.. This control signal
  // is determined by Control Unit when load instruction is used
  
- module dataMemory(CLK,writeEn,readEn,ALUMemAdd,writeDataM,readDataW);
+ module dataMemory(CLK,writeEn,ALUMemAdd,writeDataM,readDataW);
 	//parameter DATA_BASE_ADD = 5;		// Starting data base address
 	parameter OUTPUT_FILE_SIZE = 16;         // Depends on the number of output to write
 	parameter IN_BUS_WIDTH=32;
@@ -19,10 +19,10 @@
 	parameter ADDRESS_SIZE=2**10; 				// Size of memory bank
 										   // that can be referenced by a Address size
 	integer file;
-	input 	CLK, writeEn,readEn;
+	input 	CLK, writeEn;
 	input 	[IN_BUS_WIDTH-1:0] ALUMemAdd;
 	input 	[MEMORY_WIDTH-1:0] writeDataM;  // 32bit data value
-	output reg signed [MEMORY_WIDTH-1:0] readDataW;
+	output wire [MEMORY_WIDTH-1:0] readDataW;
 	
 
 	/* At positive clock edge, if there is write enable, the module latches in the data
@@ -34,25 +34,27 @@
 	
 	initial	$readmemh("data.txt",dataMemoryBank);  //Read Memory Image
 	initial file = $fopen("outputV1.txt","w"); 	// Initially the file is empty
-	   		
+	
+	assign readDataW = dataMemoryBank[ALUMemAdd]; //+DATA_BASE_ADD];  //Read from an address and output the data
 	//Write Data is clock synchronous
-	always@(posedge CLK,ALUMemAdd,writeEn,writeDataM,readEn)
+	always@(posedge CLK)
 		begin
 			if(writeEn)
 				begin
 					outputMemoryBank[ALUMemAdd] = writeDataM ;  // Read F_PC = 0 --> first eight bits
 					$fdisplay(file,outputMemoryBank[ALUMemAdd]);  // Write the value to the file
-			//		$display("Wrote: %d to %d!",outputMemoryBank[ALUMemAdd],ALUMemAdd);
+					$display("Wrote: %d to %d!",outputMemoryBank[ALUMemAdd],ALUMemAdd);
 				end
+			/*
 			else if(readEn)
 				begin
 					readDataW = dataMemoryBank[ALUMemAdd]; //+DATA_BASE_ADD];  //Read from an address and output the data
-			//		$display("Read %d from the Address: %d",readDataW,ALUMemAdd);
-				end
+				$display("Read %d from the Address: %d",readDataW,ALUMemAdd);
+				end */
 		//	else
 			//	$display("No Memory Access!");
 			end
-
+		
 endmodule
 	
 

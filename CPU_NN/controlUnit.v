@@ -1,11 +1,11 @@
 /* PURPOSE: generates the correct control signals from the opcode.
  * INPUT : 
  * OUTPUT: 
- * Conor O'Connell
+ * Conor O'Connell 
  * 5/6/2016
  */
 module controlUnit(opcode, RegWrite, MemtoReg, MemWrite, ALUControl1, //don't need branch
-                    ALUControl2, ALUSrc, RegDst,PCEn,MemRead);
+                    ALUControl2, ALUSrc, RegDst,PCEn);
 
 input [3:0] opcode;
 output PCEn;
@@ -16,7 +16,6 @@ output [2:0] ALUControl1;
 output [2:0] ALUControl2;
 output ALUSrc;
 output RegDst;
-output reg MemRead;
 
 reg RegWrite;
 reg MemtoReg;
@@ -40,7 +39,6 @@ case (opcode)
         ALUSrc <= 0;
         RegDst <= 0;
         PCEn <= 1;
-        MemRead <= 0;
   end
   4'b0001 : //ADD
   begin
@@ -52,7 +50,6 @@ case (opcode)
         ALUSrc <= 0;
         RegDst <= 1;
         PCEn <= 1;
-        MemRead <= 0;
   end
   4'b1001 : //ADDI
   begin
@@ -64,7 +61,6 @@ case (opcode)
         ALUSrc <= 1;
         RegDst <= 0;
         PCEn <= 1;
-        MemRead <= 0;
   end
   4'b0010 : //MUL
   begin
@@ -76,7 +72,6 @@ case (opcode)
         ALUSrc <= 0;
         RegDst <= 1;
         PCEn <= 1;
-        MemRead <= 0;
   end
   4'b0011 : //SINN 
   begin
@@ -88,7 +83,6 @@ case (opcode)
         ALUSrc <= 0;
         RegDst <= 1;
         PCEn <= 1;
-        MemRead <= 0; 
   end
   4'b0100 : //MAC
   begin
@@ -100,7 +94,6 @@ case (opcode)
         ALUSrc <= 0;			// Select from SrcB = 0
         RegDst <= 1;			// Select Rd = 1 for R-type instruction
         PCEn <= 1;				// Always enable PC
-        MemRead <= 0;			// Nothing to read from memory
   end
   4'b1110 : //LD
   begin
@@ -112,7 +105,6 @@ case (opcode)
         ALUSrc <= 1;     		// We add immediate values, so it should be 1
         RegDst <= 0;	 		// Select Rt for I-type instruction
         PCEn <= 1;				// Keep loading PC
-        MemRead <= 1;			// Read from memory
   end
   4'b1111 : //ST  
   begin
@@ -124,11 +116,9 @@ case (opcode)
         ALUSrc <= 1;			// Select Immediate value
         RegDst <= 0;  			// Select Rt for I-type but does not matter here
         PCEn <= 1;    			// Always enable PC
-        MemRead <= 0; 			// Nothing to read
   end
   4'b1011 : //HALT
   begin
-	PCEn <= 0;   // Disable PC
     $finish();
 	end
   default :$display("INVALID OPCODE ERROR"); 

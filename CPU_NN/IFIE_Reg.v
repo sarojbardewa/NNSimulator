@@ -1,5 +1,5 @@
-module IFEX_Reg(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,MemWriteD,MemReadD,MemtoRegD,Src1AD,Src1BD,Src1CD,RtD,RdD,SignImmD,
-					PCEn,RegWrite,ALU1Src, RegDst,ALU1Cntrl, ALU2Cntrl,MemWrite,MemRead,MemtoReg,Src1A,Src1B,Src1C,Rt,Rd,SignImm);
+module IFEX_Reg(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,MemWriteD,MemtoRegD,Src1AD,Src1BD,Src1CD,RtD,RdD,SignImmD,
+					PCEn,RegWrite,ALU1Src, RegDst,ALU1Cntrl, ALU2Cntrl,MemWrite,MemtoReg,Src1A,Src1B,Src1C,Rt,Rd,SignImm);
 
 	parameter BUS_WIDTH=32;
 	parameter ALU_FUNCT_BITS = 3;  // For Alu operations
@@ -22,7 +22,6 @@ module IFEX_Reg(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,Me
 	input [ALU_FUNCT_BITS-1:0]ALU1CntrlD;
 	input [ALU_FUNCT_BITS-1:0]ALU2CntrlD;
 	input MemWriteD;
-	input MemReadD;
 	input MemtoRegD;
 	
 	//Write Reg
@@ -45,13 +44,14 @@ module IFEX_Reg(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,Me
 	output  reg [ALU_FUNCT_BITS-1:0]ALU1Cntrl;
 	output  reg [ALU_FUNCT_BITS-1:0]ALU2Cntrl;
 	output  reg MemWrite;
-	output  reg MemRead;
 	output  reg MemtoReg;
 	
 	//Write Reg
 	output  reg [REGISTER_SIZE-1:0] Rt;
 	output  reg [REGISTER_SIZE-1:0]Rd;
 	
+	initial
+		PCEn = 1;
 	always @(posedge CLK)
 		begin
 			PCEn		<= PCEnD;
@@ -61,7 +61,6 @@ module IFEX_Reg(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,Me
 			ALU1Cntrl 	<= ALU1CntrlD;
 			ALU2Cntrl	<= ALU2CntrlD;
 			MemWrite	<= MemWriteD;
-			MemRead		<= MemReadD;
 			MemtoReg	<= MemtoRegD;
 			Src1A		<= Src1AD;
 			Src1B		<= Src1BD;

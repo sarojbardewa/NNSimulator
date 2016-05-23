@@ -4,11 +4,15 @@ module cpuTest;
 	wire [BUS_WIDTH-1:0] CLK_cycle;
 		// Get a cpu abstraction
 	cpu ArtNN_CPU(CLK,CLK_cycle);
-	initial CLK = 0;
+	initial
+		begin
+		CLK = 0;
+	end
 	always 
 		begin
+			#20;
 			CLK = ~CLK;
-			#40;
+			
 		end
 	
 	initial
