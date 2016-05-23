@@ -20,7 +20,24 @@ wire [REG_WIDTH - 1:0] rdDataA;
 wire [REG_WIDTH - 1:0] rdDataB;
 wire [REG_WIDTH - 1:0] rdDataC;
 
+wire [REG_WIDTH - 1:0] rdDataA2;
+wire [REG_WIDTH - 1:0] rdDataB2;
+wire [REG_WIDTH - 1:0] rdDataC2;
+
+reg [REG_WIDTH - 1:0] rdDataAbuf;
+reg [REG_WIDTH - 1:0] rdDataBbuf;
+reg [REG_WIDTH - 1:0] rdDataCbuf;
+
 regfile RF_1( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, rdDataB, rdAddrC, rdDataC);
+
+regfile RF_2( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA2, rdAddrB, rdDataB2, rdAddrC, rdDataC2);
+
+always @(negedge clk)
+  begin
+    rdDataAbuf <= rdDataA2;
+    rdDataBbuf <= rdDataB2;
+    rdDataCbuf <= rdDataC2;
+  end
 
 initial
 repeat (50) 
@@ -30,7 +47,7 @@ repeat (50)
  
 initial 
   begin
-    #2
+    #1
     clk = 0;
     writeEnable = 'b1;
     wrAddr = 'h1;
@@ -66,7 +83,7 @@ initial
     rdAddrA = 'h3F;
     rdAddrB = 'h2;
     rdAddrC = 'h3F;
-    #6
+    #12
     $finish();
   end
 

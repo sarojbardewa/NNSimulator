@@ -18,27 +18,29 @@ module regfile ( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, r
    input [NUM_ADDR_BITS - 1:0] wrAddr;
    input [REG_WIDTH - 1:0]     wrData;
    input [NUM_ADDR_BITS - 1:0] rdAddrA;
-   output reg [REG_WIDTH - 1:0]    rdDataA;
+   output wire [REG_WIDTH - 1:0]    rdDataA;
    input [NUM_ADDR_BITS - 1:0] rdAddrB;
-   output reg [REG_WIDTH - 1:0]    rdDataB;
+   output wire [REG_WIDTH - 1:0]    rdDataB;
    input [NUM_ADDR_BITS - 1:0] rdAddrC;
-   output reg [REG_WIDTH - 1:0]    rdDataC;
+   output wire [REG_WIDTH - 1:0]    rdDataC;
 
    reg [REG_WIDTH - 1:0] 	 regfile [0:NUM_REGS - 1];
 
-	/*
+	
 	// As soon as you supply address, read them! But, the value might not be written
 	// yet! Hence we will have to have clock
    assign rdDataA = rdAddrA ? regfile[rdAddrA] : 32'h00000000;
    assign rdDataB = rdAddrB ? regfile[rdAddrB] : 32'h00000000;
-   assign rdDataC = rdAddrC ? regfile[rdAddrC] : 32'h00000000; */
+   assign rdDataC = rdAddrC ? regfile[rdAddrC] : 32'h00000000; 
    
-   always @(posedge clk)
+ /*  always @(posedge clk)
+	assign
 		begin
 			 rdDataA <= rdAddrA ? regfile[rdAddrA] : 32'h00000000;
 			 rdDataB <= rdAddrB ? regfile[rdAddrB] : 32'h00000000;
 			 rdDataC <= rdAddrC ? regfile[rdAddrC] : 32'h00000000;
 		end
+*/
    always @(negedge clk)
    begin   					// Always write on the negative edge
       if (writeEnable) regfile[wrAddr] <= wrData;
