@@ -29,9 +29,9 @@ module IFEX_Reg(CLK,PCEnD,RegWriteD, ALU1SrcD, RegDstD,ALU1CntrlD, ALU2CntrlD,Me
 	input [REGISTER_SIZE-1:0]RdD;
 
 	// Register Files Input and output
-	output  reg [BUS_WIDTH-1:0]Src1A;
-	output  reg [BUS_WIDTH-1:0]Src1B;
-	output  reg [BUS_WIDTH-1:0]Src1C;
+	output  reg signed [BUS_WIDTH-1:0]Src1A;
+	output  reg signed [BUS_WIDTH-1:0]Src1B;
+	output  reg signed [BUS_WIDTH-1:0]Src1C;
 	
 	//Sign Extend
 	output  reg [BUS_WIDTH-1:0] SignImm;

@@ -12,7 +12,7 @@ input [nBits-1:0] SrcA,SrcB;
 input [2:0] ALU1Control;
 output[nBits-1:0] ALUResult;
 
-reg[nBits-1:0] ALUResult;
+reg signed [nBits-1:0] ALUResult;
 
 always@(ALU1Control,SrcA,SrcB) 
 begin
@@ -20,9 +20,15 @@ begin
 		3'b000:        //Add the data(add)
              ALUResult = SrcA+SrcB;
 		3'b001:		 //Multiply the data (mul)
-			 ALUResult = SrcA*SrcB; 
+			begin
+				ALUResult = SrcA*SrcB; 
+				
+			end
 		3'b010:		// Set if non-negative
-			 ALUResult = (SrcA>=SrcB) ? 32'b1:32'b0;   //Src A = -2; SrcB = R0 = 0; The SrcA<SrcB = 0
+			begin
+			 $display("Src A: %h, SrcB: %h \n", SrcA, SrcB);
+			 ALUResult = SrcA[nBits-1]<=0; //If MSB is 1, know that is is negative  //{30'd0,~SrcA[nBits-1]}; //     (SrcA>=SrcB) ? 32'd0:32'd1;   //Src A = -2; SrcB = R0 = 0; The SrcA<SrcB = 0
+			end
 		3'b111:		// No nothing		
 			 ALUResult = SrcA;   
 			 

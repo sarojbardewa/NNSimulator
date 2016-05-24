@@ -24,7 +24,7 @@ module regfile ( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, r
    input [NUM_ADDR_BITS - 1:0] rdAddrC;
    output wire [REG_WIDTH - 1:0]    rdDataC;
 
-   reg [REG_WIDTH - 1:0] 	 regfile [0:NUM_REGS - 1];
+   reg signed [REG_WIDTH - 1:0] 	 regfile [0:NUM_REGS - 1];
 
 	
 	// As soon as you supply address, read them! But, the value might not be written

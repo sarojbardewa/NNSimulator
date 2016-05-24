@@ -2,7 +2,7 @@ module ALU_Child(ALUResult,ALUResult1,ALU2Control,SrcC);
 parameter nBits = 32;
 input [nBits-1:0]SrcC,ALUResult1;
 input [2:0] ALU2Control;
-output reg[nBits-1:0] ALUResult;
+output reg signed [nBits-1:0] ALUResult;
 
 always@(ALU2Control,ALUResult1,SrcC)
 begin
