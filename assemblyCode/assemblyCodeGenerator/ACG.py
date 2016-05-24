@@ -12,7 +12,7 @@ NUM_INPUT
 NUM_HIDDEN
 NUM_OUTPUT
 """
-
+# set R13-15
 
 INPUT_VAL_ADDR = 0
 INPUT_WEIGHT_ADDR = 0
@@ -140,9 +140,9 @@ hidden_node_weight_offset = 0
 
 input_val_base_addr_reg     ='R11'
 input_weight_base_addr_reg  ='R12'
-hidden_val_base_addr_reg    ='R13' # these are unused? 
-hidden_weight_base_addr_reg ='R14' # these are unused? 
-output_val_base_addr_reg    ='R15' # these are unused? 
+hidden_val_base_addr_reg    ='R13'
+hidden_weight_base_addr_reg ='R14'
+output_val_base_addr_reg    ='R15'
 
 
 #hidden_node_base_addr_storage_reg ='R13'

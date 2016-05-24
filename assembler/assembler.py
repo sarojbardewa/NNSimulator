@@ -305,6 +305,6 @@ abs_file_path = os.path.join(script_dir, rel_path)
 
 with open(abs_file_path) as f:
  for lines in f:
-    print hex(output_command(lines)).lstrip("0x").zfill(8)
+    print hex(output_command(lines)).lstrip("0x").rstrip("L").zfill(8)
 
 
