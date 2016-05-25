@@ -3,7 +3,7 @@
 
 from random import randint
 
-NUM_TEST_CASES = 1000
+NUM_TEST_CASES = 1
 NUM_IO = 4
 
 NUM_WEIGHTS = 32
@@ -111,7 +111,7 @@ for weights in range(NUM_WEIGHTS):
         print ("FFFFFFFF")
     if (test == 0):
         print ("00000000")
-    if (test == 11):
+    if (test == 1):
         print ("00000001")
     
 for input_vector in range(NUM_TEST_CASES):
