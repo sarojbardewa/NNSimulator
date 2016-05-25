@@ -3,7 +3,7 @@
 
 from random import randint
 
-NUM_TEST_CASES = 1
+NUM_TEST_CASES = 2
 NUM_IO = 4
 
 NUM_WEIGHTS = 32
@@ -105,6 +105,17 @@ HALT,
 NOP,
 NOP,""")
 
+
+for weights in range(NUM_WEIGHTS):
+    print("00000001")
+
+for input_vector in range(NUM_TEST_CASES):
+    print("00000001")
+    print("00000001")
+    print("00000001")
+    print("00000001")
+
+"""
 for weights in range(NUM_WEIGHTS):
     test = randint(-1,1)
     if (test == -1):
@@ -119,3 +130,4 @@ for input_vector in range(NUM_TEST_CASES):
     print(hex(randint(0,1)).lstrip("0x").zfill(8))
     print(hex(randint(0,1)).lstrip("0x").zfill(8))
     print(hex(randint(0,1)).lstrip("0x").zfill(8))
+"""
