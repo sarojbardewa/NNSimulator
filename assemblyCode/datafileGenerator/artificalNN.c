@@ -9,7 +9,7 @@
  #include <time.h>
 
  #define REGS 		64
- #define INPUTS 	4
+ #define INPUTS 	1000
  #define OUTPUTS 	4
  #define WEIGHTS    16
 
@@ -40,6 +40,7 @@
     } */
 // Random inner in 
 //printf("\n**** Inputs****\n");
+  		/*
 for(loopVar = 0; loopVar<INPUTS;++loopVar)
 {
 	srand(clock());
@@ -54,7 +55,7 @@ printf("%x\n", regs[R2]);
 printf("%x\n", regs[R3]);
 printf("%x\n", regs[R4]);
 
-
+*/
 
 // Random weights of Neuron i
 //printf("\n**** Inputs-Hidden nodes Weights****\n");
@@ -110,6 +111,24 @@ printf("%x\n", regs[R37]);
 printf("%x\n", regs[R38]);
 printf("%x\n", regs[R39]);
 printf("%x\n", regs[R40]); 
+
+
+for(loopVar = 0; loopVar<INPUTS;++loopVar)
+{
+	srand(clock());
+	in[loopVar] = 1;  		// Generate 32 random weights -1, 0 or 1//
+	//in[loopVar] = 0;
+	regs[loopVar+R1] = in[loopVar];  // Registers from R1-R4 
+	printf("%x\n",regs[loopVar+R1]);
+}
+
+/*
+printf("%x\n", regs[R1]);
+printf("%x\n", regs[R2]);
+printf("%x\n", regs[R3]);
+printf("%x\n", regs[R4]);
+*/
+/*
 // Calculation of layer 1 and 2
 regs[R41]  = regs[R1]*regs[R9] +regs[R2]*regs[R10]+regs[R3]*regs[R11]+regs[R4]*regs[R12];
 regs[R42]  = regs[R1]*regs[R13]+regs[R2]*regs[R14]+regs[R3]*regs[R15]+regs[R4]*regs[R16];
@@ -117,7 +136,7 @@ regs[R43]  = regs[R1]*regs[R17]+regs[R2]*regs[R18]+regs[R3]*regs[R19]+regs[R4]*r
 regs[R44]  = regs[R1]*regs[R21]+regs[R2]*regs[R22]+regs[R3]*regs[R23]+regs[R4]*regs[R24];
 //printf("Hidden Neuron values = %x  %x %x %x \n" ,regs[R41],regs[R42],regs[R43],regs[R44]);
      
-     /* Computee the hidden neuron value */
+     // Computee the hidden neuron value 
      regs[R41] = (regs[R41] >= 0);
      regs[R42] = (regs[R42] >= 0);
      regs[R43] = (regs[R43] >= 0); 
@@ -144,7 +163,7 @@ printf("%x\n", regs[R48]);
 
 //printf("***Output Value ***");
 
-/* Computee the final output value */
+// Computee the final output value 
 regs[R5] = (regs[R45] >= 0) ;
 regs[R6] = (regs[R46] >= 0) ;
 regs[R7] = (regs[R47] >= 0) ;
@@ -155,7 +174,7 @@ printf("%x\n", regs[R5]);
 printf("%x\n", regs[R6]);
 printf("%x\n", regs[R7]);
 printf("%x\n", regs[R8]);   
-
+*/
 return 0;
 
  }
