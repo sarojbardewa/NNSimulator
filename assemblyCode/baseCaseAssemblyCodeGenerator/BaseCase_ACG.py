@@ -3,7 +3,7 @@
 
 from random import randint
 
-NUM_TEST_CASES = 2
+NUM_TEST_CASES = 1000
 NUM_IO = 4
 
 NUM_WEIGHTS = 32
@@ -50,10 +50,10 @@ LD,R39,R63,#31,
 LD,R40,R63,#32,""",
 sep = '')
 for test_case_number in range(NUM_TEST_CASES):
-    print("""LD,R1,R63,#""",32 + test_case_number * NUM_IO,"""
-LD,R2,R63,#""",33 + test_case_number * NUM_IO,""",
-LD,R3,R63,#""",34 + test_case_number * NUM_IO,""",
-LD,R4,R63,#""",35 + test_case_number * NUM_IO,""",
+    print("""LD,R1,R63,#""",33 + test_case_number * NUM_IO,""",
+LD,R2,R63,#""",34 + test_case_number * NUM_IO,""",
+LD,R3,R63,#""",35 + test_case_number * NUM_IO,""",
+LD,R4,R63,#""",36 + test_case_number * NUM_IO,""",
 MUL,R49,R1,R9,
 MAC,R49,R2,R10,
 MAC,R49,R3,R11,
@@ -106,29 +106,29 @@ HALT,
 NOP,
 NOP,""")
 
-
+"""
 for weights in range(NUM_WEIGHTS):
-    print("00000001")
+    print("0x00000001")
 
 for input_vector in range(NUM_TEST_CASES):
-    print("00000001")
-    print("00000001")
-    print("00000001")
-    print("00000001")
-
+    print("0x00000001")
+    print("0x00000001")
+    print("0x00000001")
+    print("0x00000001")
 """
+
 for weights in range(NUM_WEIGHTS):
     test = randint(-1,1)
     if (test == -1):
-        print ("FFFFFFFF")
+        print ("0xFFFFFFFF")
     if (test == 0):
-        print ("00000000")
+        print ("0x00000000")
     if (test == 1):
-        print ("00000001")
+        print ("0x00000001")
     
 for input_vector in range(NUM_TEST_CASES):
-    print(hex(randint(0,1)).lstrip("0x").zfill(8))
-    print(hex(randint(0,1)).lstrip("0x").zfill(8))
-    print(hex(randint(0,1)).lstrip("0x").zfill(8))
-    print(hex(randint(0,1)).lstrip("0x").zfill(8))
-"""
+    print(hex(randint(0,1)))
+    print(hex(randint(0,1)))
+    print(hex(randint(0,1)))
+    print(hex(randint(0,1)))
+    
