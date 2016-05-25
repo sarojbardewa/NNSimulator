@@ -9,7 +9,7 @@
  #include <time.h>
 
  #define REGS 		64
- #define INPUTS 	1000
+ #define INPUTS 	1
  #define OUTPUTS 	4
  #define WEIGHTS    16
 

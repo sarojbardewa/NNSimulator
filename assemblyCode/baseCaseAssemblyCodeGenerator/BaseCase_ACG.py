@@ -1,11 +1,20 @@
 #use on Conor's home machine: CD /d  E:\EZ\SCHOOL\2016\ECE486
 #C:\Users\Bacon\AppData\Local\Programs\Python\Python35-32\python.exe BaseCase_ACG.py >1000testcases.txt
 
+from random import randint
+
 NUM_TEST_CASES = 1000
 NUM_IO = 4
 
+NUM_WEIGHTS = 32
+
+NUM_CODE_LINES = 34 + (NUM_TEST_CASES * 48) + 4 #weights start
+#INPUT_VECTOR_START_ADDR = 
+
+
+
 print (
-"""ADDI,R63,R0,#0
+"""ADDI,R63,R0,#""", NUM_CODE_LINES, """
 ADDI,R62,R0,#0
 LD,R9,R63,#1
 LD,R10,R63,#2
@@ -41,52 +50,52 @@ LD,R39,R63,#31
 LD,R40,R63,#32""")
 for test_case_number in range(NUM_TEST_CASES):
     print("""LD,R1,R63,#""",32 + test_case_number * NUM_IO,"""
-LD,R2,R63,#""",33 + test_case_number * NUM_IO,"""
-LD,R3,R63,#""",34 + test_case_number * NUM_IO,"""
-LD,R4,R63,#""",35 + test_case_number * NUM_IO,"""
-MUL,R49,R1,R9
-MAC,R49,R2,R10
-MAC,R49,R3,R11
-MAC,R49,R4,R12
-SINN,R41,R49,R0
-MUL,R50,R1,R13
-MAC,R50,R2,R14
-MAC,R50,R3,R15
-MAC,R50,R4,R16
-SINN,R42,R50,R0   
-MUL,R51,R1,R17
-MAC,R51,R2,R18
-MAC,R51,R3,R19
-MAC,R51,R4,R20
-SINN,R43,R51,R0    
-MUL,R52,R1,R21
-MAC,R52,R2,R22
-MAC,R52,R3,R23
-MAC,R52,R4,R24
-SINN,R44,R52,R0
-MUL,R49,R41,R25
-MAC,R49,R42,R26
-MAC,R49,R43,R27
-MAC,R49,R44,R28
-SINN,R5,R49,R0
-ST,R5,R62,#""",0 + test_case_number * NUM_IO,"""
-MUL,R50,R41,R29  	
-MAC,R50,R42,R30  	
-MAC,R50,R43,R31  	
-MAC,R50,R44,R32     
-SINN,R6,R50,R0     
-ST,R6,R62,#""",1 + test_case_number * NUM_IO,"""
-MUL,R51,R41,R33
-MAC,R51,R42,R34  	
-MAC,R51,R43,R35  	
-MAC,R51,R44,R36     
-SINN,R7,R51,R0      
-ST,R7,R62,#""",2 + test_case_number * NUM_IO,"""	
-MUL,R52,R41,R37  	
-MAC,R52,R42,R38  	
-MAC,R52,R43,R39  	
-MAC,R52,R44,R40     
-SINN,R8,R52,R0      
+LD,R2,R63,#""",33 + test_case_number * NUM_IO,""",
+LD,R3,R63,#""",34 + test_case_number * NUM_IO,""",
+LD,R4,R63,#""",35 + test_case_number * NUM_IO,""",
+MUL,R49,R1,R9,
+MAC,R49,R2,R10,
+MAC,R49,R3,R11,
+MAC,R49,R4,R12,
+SINN,R41,R49,R0,
+MUL,R50,R1,R13,
+MAC,R50,R2,R14,
+MAC,R50,R3,R15,
+MAC,R50,R4,R16,
+SINN,R42,R50,R0,
+MUL,R51,R1,R17,
+MAC,R51,R2,R18,
+MAC,R51,R3,R19,
+MAC,R51,R4,R20,
+SINN,R43,R51,R0,
+MUL,R52,R1,R21,
+MAC,R52,R2,R22,
+MAC,R52,R3,R23,
+MAC,R52,R4,R24,
+SINN,R44,R52,R0,
+MUL,R49,R41,R25,
+MAC,R49,R42,R26,
+MAC,R49,R43,R27,
+MAC,R49,R44,R28,
+SINN,R5,R49,R0,
+ST,R5,R62,#""",0 + test_case_number * NUM_IO,""",
+MUL,R50,R41,R29,
+MAC,R50,R42,R30,
+MAC,R50,R43,R31,
+MAC,R50,R44,R32,
+SINN,R6,R50,R0,
+ST,R6,R62,#""",1 + test_case_number * NUM_IO,""",
+MUL,R51,R41,R33,
+MAC,R51,R42,R34,
+MAC,R51,R43,R35,
+MAC,R51,R44,R36,
+SINN,R7,R51,R0,
+ST,R7,R62,#""",2 + test_case_number * NUM_IO,""",	
+MUL,R52,R41,R37,
+MAC,R52,R42,R38,
+MAC,R52,R43,R39,
+MAC,R52,R44,R40,
+SINN,R8,R52,R0,
 ST,R8,R62,#""",3 + test_case_number * NUM_IO,
 sep = ''
 )
@@ -94,5 +103,19 @@ print(
 """NOP,		
 HALT,
 NOP,
-NOP,
-""")
+NOP,""")
+
+for weights in range(NUM_WEIGHTS):
+    test = randint(-1,1)
+    if (test == -1):
+        print ("FFFFFFFF")
+    if (test == 0):
+        print ("00000000")
+    if (test == 11):
+        print ("00000001")
+    
+for input_vector in range(NUM_TEST_CASES):
+    print(hex(randint(0,1)).lstrip("0x").zfill(8))
+    print(hex(randint(0,1)).lstrip("0x").zfill(8))
+    print(hex(randint(0,1)).lstrip("0x").zfill(8))
+    print(hex(randint(0,1)).lstrip("0x").zfill(8))
