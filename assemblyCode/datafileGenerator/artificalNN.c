@@ -118,39 +118,39 @@ regs[R44]  = regs[R1]*regs[R21]+regs[R2]*regs[R22]+regs[R3]*regs[R23]+regs[R4]*r
 //printf("Hidden Neuron values = %x  %x %x %x \n" ,regs[R41],regs[R42],regs[R43],regs[R44]);
      
      /* Computee the hidden neuron value */
-     regs[R41] = (regs[R41] >= 0) ? 1:0;
-     regs[R42] = (regs[R42] >= 0) ? 1:0;
-     regs[R43] = (regs[R43] >= 0) ? 1:0;
-     regs[R44] = (regs[R44] >= 0) ? 1:0;
+     regs[R41] = (regs[R41] >= 0);
+     regs[R42] = (regs[R42] >= 0);
+     regs[R43] = (regs[R43] >= 0); 
+     regs[R44] = (regs[R44] >= 0); 
      
- /*    
+    
 printf("***Hidden Neuron Values After Calculation***\n");
-printf(" regs[R41] = %x\n", regs[R41]);
-printf(" regs[R42] = %x\n", regs[R42]);
-printf(" regs[R43] = %x\n", regs[R43]);
-printf(" regs[R44] = %x\n", regs[R44]); */
+printf("%x\n", regs[R41]);
+printf("%x\n", regs[R42]);
+printf("%x\n", regs[R43]);
+printf("%x\n", regs[R44]); 
 // Calculation of layer 2 and layer 3 
 regs[R45]  = regs[R41]*regs[R25]+regs[R42]*regs[R26]+regs[R43]*regs[R27]+regs[R44]*regs[R28];
 regs[R46]  = regs[R41]*regs[R29]+regs[R42]*regs[R30]+regs[R43]*regs[R31]+regs[R44]*regs[R32];
 regs[R47]  = regs[R41]*regs[R33]+regs[R42]*regs[R34]+regs[R43]*regs[R35]+regs[R44]*regs[R36];
 regs[R48]  = regs[R41]*regs[R37]+regs[R42]*regs[R38]+regs[R43]*regs[R39]+regs[R44]*regs[R40];
 
-/*
+
 printf("***Output After Calculation***\n");
-printf(" regs[R45] = %x\n", regs[R45]);
-printf(" regs[R46] = %x\n", regs[R46]);
-printf(" regs[R47] = %x\n", regs[R47]);
-printf(" regs[R48] = %x\n", regs[R48]);   */
+printf("%x\n", regs[R45]);
+printf("%x\n", regs[R46]);
+printf("%x\n", regs[R47]);
+printf("%x\n", regs[R48]);   
 
 //printf("***Output Value ***");
 
 /* Computee the final output value */
-regs[R5] = (regs[R45] >= 0) ? 1:0;
-regs[R6] = (regs[R46] >= 0) ? 1:0;
-regs[R7] = (regs[R47] >= 0) ? 1:0;
-regs[R8] = (regs[R48] >= 0) ? 1:0;
+regs[R5] = (regs[R45] >= 0) ;
+regs[R6] = (regs[R46] >= 0) ;
+regs[R7] = (regs[R47] >= 0) ;
+regs[R8] = (regs[R48] >= 0) ;
 
-//printf("***Output Values***\n");
+printf("***Output Values***\n");
 printf("%x\n", regs[R5]);
 printf("%x\n", regs[R6]);
 printf("%x\n", regs[R7]);
