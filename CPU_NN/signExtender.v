@@ -19,7 +19,7 @@ output [size_out - 1:0] extended;
 
 wire [size_in - 1:0] valin;
 
-
-assign  extended[size_out - 1:0] = { {( size_out - size_in ){valin[size_in-1]}}, valin[size_in-1:0] };
+reg temp = 0;
+assign  extended[size_out - 1:0] = { {( size_out - size_in ){temp}}, valin[size_in-1:0] };
 
 endmodule

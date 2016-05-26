@@ -26,7 +26,7 @@ begin
 			end
 		3'b010:		// Set if non-negative
 			begin
-			 $display("Src A: %h, SrcB: %h \n", SrcA, SrcB);
+			// $display("Src A: %h, SrcB: %h \n", SrcA, SrcB);
 			 ALUResult = SrcA[nBits-1]<=0; //If MSB is 1, know that is is negative  //{30'd0,~SrcA[nBits-1]}; //     (SrcA>=SrcB) ? 32'd0:32'd1;   //Src A = -2; SrcB = R0 = 0; The SrcA<SrcB = 0
 			end
 		3'b111:		// No nothing		
