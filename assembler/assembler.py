@@ -1,5 +1,10 @@
+# This program takes an assembly code imput named inputfile.txt, and outputs a
+# usable memory image for our CPU veralog module.
+# By Conor O'Connell
+#designed for python 3
 # use (in linux): python assembler.py | unix2dos.exe > output.txt
 
+# This block assigns each register name to its value (in hex)
 R0 = 0x0
 R1 = 0x1
 R2 = 0x2
@@ -65,7 +70,7 @@ R61 = 0x3d
 R62 = 0x3e
 R63 = 0x3f
 
-
+# this block assignes the opcode values of the instructions
 NOP = 0x0
 ADD = 0x1
 MUL = 0x2
@@ -78,6 +83,7 @@ LD = 0xE
 ST = 0xF
 HALT = 0xB
 
+# this block defines the "shift amounts", the bit offsets of each field
 opcode_shift_amount = 28
 rs_shift_amount = 22 # assuming 64 (2^6) registers
 rt_shift_amount = 16 # assuming 64 registers
@@ -85,6 +91,11 @@ rd_shift_amount = 10 # assuming 64 registers
 immediate_shift_amount = 0 #NOTE: up to programer not to exceed limit.
 
 #NOTE: all params passed by referance in python.
+
+#this function modifies an input command
+#command is the input command
+#arg is the field from the assembly (could be e.g. ADD, or R5, or an immediate value)
+#shift_amount is the location this argument(arg) modifies in the command; i.e., an offset.
 def modifycommand( command, arg, shift_amount ):
   
   if arg == "NOP":
@@ -239,17 +250,21 @@ def modifycommand( command, arg, shift_amount ):
     command = command | (R62 << shift_amount)
   if arg == "R63":
     command = command | (R63 << shift_amount)
-  
+
+  #this is where we assign immediate values
   if arg[0:1] == "#":
     command = command | int(arg[1:]) #<< immediate_shift_amount
-    #NOTE: up to programer not to exceed limit. currently 2^12.
+    #NOTE: up to programer not to exceed limit. currently 2^16.
     #NOTE: this implimentation leads to some "interesting" behavior
 
+  #similar to immediate values, this outputs a raw base 16 value.
+  #used for constants
   if arg[0:2] == "0x":
     command = command | int(arg[2:], 16)
     
   return command
 
+#this runs modifycommand on each field in the input command
 def output_command( sline ):
   #sline = "ADD,R1,R2,R31"
 
@@ -304,7 +319,8 @@ script_dir = os.path.dirname(os.path.realpath(__file__)) #<-- absolute dir the s
 rel_path = "inputfile.txt"
 abs_file_path = os.path.join(script_dir, rel_path)
 
-
+#iterate over each line in the inputfile.
+#format it to make it acceptable as a 32 bit hex value.
 with open(abs_file_path) as f:
  for lines in f:
     print (hex(output_command(lines)).lstrip("0x").rstrip("L").zfill(8))
