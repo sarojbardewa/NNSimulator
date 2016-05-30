@@ -2,6 +2,7 @@
 # usable memory image for our CPU veralog module.
 # By Conor O'Connell
 #designed for python 3
+
 # use (in linux): python assembler.py | unix2dos.exe > output.txt
 
 # This block assigns each register name to its value (in hex)

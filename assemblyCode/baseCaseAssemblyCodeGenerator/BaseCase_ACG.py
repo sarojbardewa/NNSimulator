@@ -1,9 +1,10 @@
+#This program outputs an assembly text file that can be converted to machine code by assembler.py
+#By Conor O'Connell
+#designed for python 3 
+
 #use on Conor's home machine: CD /d  E:\EZ\SCHOOL\2016\ECE486
 #C:\Users\Bacon\AppData\Local\Programs\Python\Python35-32\python.exe BaseCase_ACG.py >1000testcases.txt
-#
-#
-#
-#
+
 NUM_TEST_CASES = 1000 # number of input vectors
 NUM_IO = 4 # number of inputs and outputs per iteration
 
