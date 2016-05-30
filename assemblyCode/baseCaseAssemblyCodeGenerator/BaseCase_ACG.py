@@ -1,13 +1,17 @@
 #use on Conor's home machine: CD /d  E:\EZ\SCHOOL\2016\ECE486
 #C:\Users\Bacon\AppData\Local\Programs\Python\Python35-32\python.exe BaseCase_ACG.py >1000testcases.txt
+#
+#
+#
+#
+NUM_TEST_CASES = 1000 # number of input vectors
+NUM_IO = 4 # number of inputs and outputs per iteration
 
-from random import randint
-
-NUM_TEST_CASES = 1000
-NUM_IO = 4
-
-NUM_WEIGHTS = 32
-
+# NUM_CODE_LINES gives the base address (start) of the weights and inputs
+# there are 34 instructions before the loop starts.
+# there are 48 instructions in the loop.
+# there are NUM_TEST_CASES iterations of the loop
+# there are 4 instructions after the loop.
 NUM_CODE_LINES = 34 + (NUM_TEST_CASES * 48) + 4 #weights start
 #INPUT_VECTOR_START_ADDR = 
 
@@ -105,30 +109,3 @@ print(
 HALT,
 NOP,
 NOP,""")
-
-"""
-for weights in range(NUM_WEIGHTS):
-    print("0x00000001")
-
-for input_vector in range(NUM_TEST_CASES):
-    print("0x00000001")
-    print("0x00000001")
-    print("0x00000001")
-    print("0x00000001")
-"""
-
-for weights in range(NUM_WEIGHTS):
-    test = randint(-1,1)
-    if (test == -1):
-        print ("0xFFFFFFFF")
-    if (test == 0):
-        print ("0x00000000")
-    if (test == 1):
-        print ("0x00000001")
-    
-for input_vector in range(NUM_TEST_CASES):
-    print(hex(randint(0,1)))
-    print(hex(randint(0,1)))
-    print(hex(randint(0,1)))
-    print(hex(randint(0,1)))
-    
