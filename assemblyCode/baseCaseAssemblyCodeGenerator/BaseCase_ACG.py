@@ -12,8 +12,8 @@ NUM_IO = 4 # number of inputs and outputs per iteration
 # there are 34 instructions before the loop starts.
 # there are 48 instructions in the loop.
 # there are NUM_TEST_CASES iterations of the loop
-# there are 4 instructions after the loop.
-NUM_CODE_LINES = 34 + (NUM_TEST_CASES * 48) + 4 #weights start
+# there are 3 instructions after the loop.
+NUM_CODE_LINES = 34 + (NUM_TEST_CASES * 48) + 3 #weights start
 #INPUT_VECTOR_START_ADDR = 
 
 
@@ -108,5 +108,4 @@ sep = ''
 print(
 """NOP,		
 HALT,
-NOP,
 NOP,""")
