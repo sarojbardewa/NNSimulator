@@ -10,7 +10,7 @@ module instructionMemory(F_PC,Instr);
 	parameter OUT_BUS_WIDTH=32;   			// Output Bus Width
 	parameter IN_BUS_WIDTH=32;				// Input Bus Width
 	parameter MEMORY_WIDTH=32;				// Bits of Memory accessed at a time
-	parameter ADDRESS_SIZE= 2**10;                //2**IN_BUS_WIDTH; // Size of memory bank. Depends on locations 
+	parameter ADDRESS_SIZE= 2**16;                //2**IN_BUS_WIDTH; // Size of memory bank. Depends on locations 
 									    	// that can be referenced by a Program Counter
 
 	input[IN_BUS_WIDTH-1:0] F_PC;			//input PC 

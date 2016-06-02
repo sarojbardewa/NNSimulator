@@ -1,7 +1,7 @@
 /* PURPOSE: generates the correct control signals from the opcode.
- * INPUT : 
- * OUTPUT: 
- * Conor O'Connell 
+ * INPUT : opcode, 
+ * OUTPUT: PCEn, RegWrite, MemtoReg, MemWrite, ALUControl1, ALUControl2, ALUSrc, RegDst, MemRead
+ * Conor O'Connell
  * 5/6/2016
  */
 module controlUnit(opcode, RegWrite, MemtoReg, MemWrite, ALUControl1, //don't need branch
@@ -27,6 +27,8 @@ reg RegDst;
 reg PCEn;
 
 initial PCEn = 1;
+
+//outputs only need updating when opcode changes.
 always @(opcode)
 case (opcode)
   4'b0000 : //NOP
@@ -123,11 +125,6 @@ case (opcode)
 	end
   default :$display("INVALID OPCODE ERROR"); 
 endcase
-
-/*
-ENDNOTES: ALUSrc and RegDst need verification.
-LD and ST also.
-*/
 
 
 endmodule

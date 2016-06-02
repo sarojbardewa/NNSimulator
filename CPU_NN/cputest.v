@@ -14,9 +14,10 @@ module cpuTest;
 			CLK = ~CLK;
 			
 		end
-	
+
+		
 	initial
 		begin
 		$monitor(" Time: %d, Cycle: %d", $time, CLK_cycle);
-		end
+		end  
 endmodule

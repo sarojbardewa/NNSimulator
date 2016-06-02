@@ -1,12 +1,9 @@
 /* PURPOSE: This module simulates a three port register file (2 output and 1 input port).
-*  INPUTS :Clock, write Enable, write address, write data, read address(port A), read address(port B)
-*  OUTPUTS:Read data(port A), Read data(port B)
+*  INPUTS :Clock, write Enable, write address, write data, read address(port A), read address(port B), read address(port C)
+*  OUTPUTS:Read data(port A), Read data(port B), Read data(port B)
 *  Conor O'Connell & Saroj Bardewa
 *  ECE 486
 */
-
-//http://courses.cs.washington.edu/courses/cse370/10sp/pdfs/lectures/regfile.txt
-
 
 module regfile ( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, rdDataB, rdAddrC, rdDataC);
    parameter NUM_ADDR_BITS = 6;
@@ -24,14 +21,14 @@ module regfile ( clk,  writeEnable, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, r
    input [NUM_ADDR_BITS - 1:0] rdAddrC;
    output wire [REG_WIDTH - 1:0]    rdDataC;
 
+   //array of vectors
    reg signed [REG_WIDTH - 1:0] 	 regfile [0:NUM_REGS - 1];
 
+
+   initial 
+      regfile[0] = 32'h00000000;
 	
-	// As soon as you supply address, read them! But, the value might not be written
-	// yet! Hence we will have to have clock
-	initial 
-		regfile[0] = 32'h00000000;
-	
+   //continuously assigned outputs
    assign rdDataA = rdAddrA ? regfile[rdAddrA] : 32'h00000000;
    assign rdDataB = rdAddrB ? regfile[rdAddrB] : 32'h00000000;
    assign rdDataC = rdAddrC ? regfile[rdAddrC] : 32'h00000000; 

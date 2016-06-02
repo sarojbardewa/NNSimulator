@@ -13,10 +13,10 @@
  
  module dataMemory(CLK,writeEn,ALUMemAdd,writeDataM,readDataW);
 	//parameter DATA_BASE_ADD = 5;		// Starting data base address
-	parameter OUTPUT_FILE_SIZE = 16;         // Depends on the number of output to write
+	parameter OUTPUT_FILE_SIZE = 4100;         // Depends on the number of output to write
 	parameter IN_BUS_WIDTH=32;
 	parameter MEMORY_WIDTH=32;				// Bits of Memory accessed at a time 
-	parameter ADDRESS_SIZE=2**10; 				// Size of memory bank
+	parameter ADDRESS_SIZE=2**16; 				// Size of memory bank
 										   // that can be referenced by a Address size
 	integer file;
 	input 	CLK, writeEn;
@@ -43,7 +43,7 @@
 				begin
 					outputMemoryBank[ALUMemAdd] = writeDataM ;  // Read F_PC = 0 --> first eight bits
 					$fdisplay(file,outputMemoryBank[ALUMemAdd]);  // Write the value to the file
-					$display("Wrote: %d to %d!",outputMemoryBank[ALUMemAdd],ALUMemAdd);
+			//		$display("Wrote: %d to %d!",outputMemoryBank[ALUMemAdd],ALUMemAdd);
 				end
 		end
 		

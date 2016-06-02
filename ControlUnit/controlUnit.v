@@ -1,6 +1,6 @@
 /* PURPOSE: generates the correct control signals from the opcode.
- * INPUT : 
- * OUTPUT: 
+ * INPUT : opcode, 
+ * OUTPUT: PCEn, RegWrite, MemtoReg, MemWrite, ALUControl1, ALUControl2, ALUSrc, RegDst, MemRead
  * Conor O'Connell
  * 5/6/2016
  */
