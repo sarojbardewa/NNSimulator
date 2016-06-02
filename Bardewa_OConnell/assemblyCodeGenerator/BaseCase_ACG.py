@@ -3,7 +3,7 @@
 
 from random import randint
 
-NUM_TEST_CASES = 2
+NUM_TEST_CASES = 1000
 NUM_IO = 4
 
 NUM_WEIGHTS = 32
