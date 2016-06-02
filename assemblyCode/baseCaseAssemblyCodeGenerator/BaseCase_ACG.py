@@ -1,18 +1,13 @@
-#This program outputs an assembly text file that can be converted to machine code by assembler.py
-#By Conor O'Connell
-#designed for python 3 
-
 #use on Conor's home machine: CD /d  E:\EZ\SCHOOL\2016\ECE486
 #C:\Users\Bacon\AppData\Local\Programs\Python\Python35-32\python.exe BaseCase_ACG.py >1000testcases.txt
 
-NUM_TEST_CASES = 1000 # number of input vectors
-NUM_IO = 4 # number of inputs and outputs per iteration
+from random import randint
 
-# NUM_CODE_LINES gives the base address (start) of the weights and inputs
-# there are 34 instructions before the loop starts.
-# there are 48 instructions in the loop.
-# there are NUM_TEST_CASES iterations of the loop
-# there are 3 instructions after the loop.
+NUM_TEST_CASES = 2
+NUM_IO = 4
+
+NUM_WEIGHTS = 32
+
 NUM_CODE_LINES = 34 + (NUM_TEST_CASES * 48) + 3 #weights start
 #INPUT_VECTOR_START_ADDR = 
 
@@ -21,44 +16,44 @@ NUM_CODE_LINES = 34 + (NUM_TEST_CASES * 48) + 3 #weights start
 print (
 """ADDI,R63,R0,#""", NUM_CODE_LINES, """,
 ADDI,R62,R0,#0,
-LD,R9,R63,#1,
-LD,R10,R63,#2,
-LD,R11,R63,#3,
-LD,R12,R63,#4,
-LD,R13,R63,#5,
-LD,R14,R63,#6,
-LD,R15,R63,#7,
-LD,R16,R63,#8,
-LD,R17,R63,#9,
-LD,R18,R63,#10,
-LD,R19,R63,#11,
-LD,R20,R63,#12,
-LD,R21,R63,#13,
-LD,R22,R63,#14,
-LD,R23,R63,#15,
-LD,R24,R63,#16,
-LD,R25,R63,#17,
-LD,R26,R63,#18,
-LD,R27,R63,#19,
-LD,R28,R63,#20,
-LD,R29,R63,#21,
-LD,R30,R63,#22,
-LD,R31,R63,#23,
-LD,R32,R63,#24,
-LD,R33,R63,#25,
-LD,R34,R63,#26,
-LD,R35,R63,#27,
-LD,R36,R63,#28,
-LD,R37,R63,#29,
-LD,R38,R63,#30,
-LD,R39,R63,#31,
-LD,R40,R63,#32,""",
+LD,R9,R63,#0,
+LD,R10,R63,#1,
+LD,R11,R63,#2,
+LD,R12,R63,#3,
+LD,R13,R63,#4,
+LD,R14,R63,#5,
+LD,R15,R63,#6,
+LD,R16,R63,#7,
+LD,R17,R63,#8,
+LD,R18,R63,#9,
+LD,R19,R63,#10,
+LD,R20,R63,#11,
+LD,R21,R63,#12,
+LD,R22,R63,#13,
+LD,R23,R63,#14,
+LD,R24,R63,#15,
+LD,R25,R63,#16,
+LD,R26,R63,#17,
+LD,R27,R63,#18,
+LD,R28,R63,#19,
+LD,R29,R63,#20,
+LD,R30,R63,#21,
+LD,R31,R63,#22,
+LD,R32,R63,#23,
+LD,R33,R63,#24,
+LD,R34,R63,#25,
+LD,R35,R63,#26,
+LD,R36,R63,#27,
+LD,R37,R63,#28,
+LD,R38,R63,#29,
+LD,R39,R63,#30,
+LD,R40,R63,#31,""",
 sep = '')
 for test_case_number in range(NUM_TEST_CASES):
-    print("""LD,R1,R63,#""",33 + test_case_number * NUM_IO,""",
-LD,R2,R63,#""",34 + test_case_number * NUM_IO,""",
-LD,R3,R63,#""",35 + test_case_number * NUM_IO,""",
-LD,R4,R63,#""",36 + test_case_number * NUM_IO,""",
+    print("""LD,R1,R63,#""",32 + test_case_number * NUM_IO,""",
+LD,R2,R63,#""",33 + test_case_number * NUM_IO,""",
+LD,R3,R63,#""",34 + test_case_number * NUM_IO,""",
+LD,R4,R63,#""",35 + test_case_number * NUM_IO,""",
 MUL,R49,R1,R9,
 MAC,R49,R2,R10,
 MAC,R49,R3,R11,
