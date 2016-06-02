@@ -1,4 +1,6 @@
 /*This is the articifical neural network in c 
+ * This file computes the neural network weights and inputs randomly
+ * This also computes the outputs.
    Saroj Bardewa
    Spring 2016
    ECE 586
