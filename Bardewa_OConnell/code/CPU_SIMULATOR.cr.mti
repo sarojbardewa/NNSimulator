@@ -1,0 +1,85 @@
+C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/regfile.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/regfile.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/cpu.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/cpu.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/IDIE_Reg.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/IDIE_Reg.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IFEX_Reg
+
+Top level modules:
+	IFEX_Reg
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/BitFieldExtender.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/BitFieldExtender.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module bitFieldExt
+
+Top level modules:
+	bitFieldExt
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/instructMemory.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/instructMemory.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module instructionMemory
+
+Top level modules:
+	instructionMemory
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/cputest.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/cputest.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module cpuTest
+
+Top level modules:
+	cpuTest
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/controlUnit.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/controlUnit.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module controlUnit
+
+Top level modules:
+	controlUnit
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/multiplexer_6bits.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/multiplexer_6bits.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux32x2_6bits
+
+Top level modules:
+	mux32x2_6bits
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/ALU1.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/ALU1.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ALU1
+
+Top level modules:
+	ALU1
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/dataMemory.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/dataMemory.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dataMemory
+
+Top level modules:
+	dataMemory
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/multiplexer.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/multiplexer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux32x2
+
+Top level modules:
+	mux32x2
+
+} {} {}} C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/ALU2.v {1 {vlog -work work -stats=none C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/ALU2.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ALU2
+
+Top level modules:
+	ALU2
+
+} {} {}}
