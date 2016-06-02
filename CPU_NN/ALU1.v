@@ -6,13 +6,13 @@
   * Saroj Bardewa
 ********************************************/
 
-module ALU_Parent(ALUResult, ALU1Control,SrcA, SrcB);
-parameter nBits = 32;
-input [nBits-1:0] SrcA,SrcB;
-input [2:0] ALU1Control;
-output[nBits-1:0] ALUResult;
+module ALU1(ALUResult, ALU1Control,SrcA, SrcB);
+parameter 				nBits = 32;
+input [nBits-1:0] 		SrcA,SrcB;    // Inputs to the ALU
+input [2:0] 			ALU1Control;  // Control Signals
+output[nBits-1:0] 		ALUResult;	  // Result of ALU
 
-reg signed [nBits-1:0] ALUResult;
+reg signed [nBits-1:0] ALUResult;     // Set output as a register
 
 always@(ALU1Control,SrcA,SrcB) 
 begin
@@ -26,14 +26,13 @@ begin
 			end
 		3'b010:		// Set if non-negative
 			begin
-			// $display("Src A: %h, SrcB: %h \n", SrcA, SrcB);
-			 ALUResult = SrcA[nBits-1]<=0; //If MSB is 1, know that is is negative  //{30'd0,~SrcA[nBits-1]}; //     (SrcA>=SrcB) ? 32'd0:32'd1;   //Src A = -2; SrcB = R0 = 0; The SrcA<SrcB = 0
+				ALUResult = SrcA[nBits-1]<=0; //If MSB is 1, know that is is negative  
 			end
 		3'b111:		// No nothing		
 			 ALUResult = SrcA;   
 			 
 		default:   	
-			ALUResult = 32'd0;
+			ALUResult = 32'd0;    // This stage should never occur
 	endcase
 	
 end

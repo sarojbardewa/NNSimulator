@@ -129,7 +129,7 @@ case (opcode)
   4'b1011 : //HALT
   begin
 	PCEn <= 0;   // Disable PC
-    $finish();
+	#20	$finish();
 	end
   default :$display("INVALID OPCODE ERROR"); 
 endcase

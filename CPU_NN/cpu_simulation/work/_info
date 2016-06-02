@@ -8,30 +8,74 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/Saroj/OneDrive/Spring 2016/ECE586/ArtificialNN/NNSimulator/CPU_NN/c
-vALU_Child
-Z0 !s110 1464630752
+vALU1
+Z0 !s110 1464837177
 !i10b 1
-!s100 6CCjcEzNkO81Ch]`6Y_bf1
-ISTVcH=`HOJZTT86:RzWbM3
+!s100 giZ;VhJTQJUM4:^YzFmT`3
+ImnOiGQg`TN;3F>aETM3][1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cpu_simulation
-w1464049559
-8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU_Child.v
-FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU_Child.v
-L0 1
+w1464834514
+8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU1.v
+FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU1.v
+L0 9
 Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1464630752.000000
+Z4 !s108 1464837177.000000
+!s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU1.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@a@l@u1
+vALU2
+R0
+!i10b 1
+!s100 Wjcja2<[_2AQeL<EQ4hSe0
+I?fEI7^Si_XHYGY<XMN1`13
+R1
+R2
+w1464834598
+8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU2.v
+FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU2.v|
+!s101 -O0
+!i113 1
+R5
+n@a@l@u2
+vALU_Child
+Z6 !s110 1464827327
+!i10b 1
+!s100 6CCjcEzNkO81Ch]`6Y_bf1
+ISTVcH=`HOJZTT86:RzWbM3
+R1
+R2
+w1464049559
+8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU_Child.v
+FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU_Child.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z7 !s108 1464827327.000000
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU_Child.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/ALU_Child.v|
 !s101 -O0
 !i113 1
-Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+R5
 n@a@l@u_@child
 vALU_Parent
-R0
+R6
 !i10b 1
 !s100 cgME4O`CZVkm;U<[1]O`A0
 I[o]@<TRGCzN2jOm`FT8TA2
@@ -45,7 +89,7 @@ R3
 r1
 !s85 0
 31
-R4
+R7
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/BigALU_Unit.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/BigALU_Unit.v|
 !s101 -O0
@@ -53,7 +97,7 @@ R4
 R5
 n@a@l@u_@parent
 vbitFieldExt
-R0
+Z8 !s110 1464837176
 !i10b 1
 !s100 GgLb9bRYKcRJ04DG65acd0
 IC8I4Y?V4>M^4H3^jY4eo_2
@@ -62,12 +106,12 @@ R2
 w1464629867
 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/BitFieldExtender.v
 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/BitFieldExtender.v
-Z6 L0 13
+Z9 L0 13
 R3
 r1
 !s85 0
 31
-R4
+Z10 !s108 1464837176.000000
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/BitFieldExtender.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/BitFieldExtender.v|
 !s101 -O0
@@ -75,13 +119,13 @@ R4
 R5
 nbit@field@ext
 vcontrolUnit
-Z7 !s110 1464630751
+!s110 1464837175
 !i10b 1
-!s100 iAOc8f?Lh84O33LPL57bF2
-I97ZJYJiY1`2ZM_Xb]iEAO1
+!s100 6;aYz68WH_]U;_3Eefn=I0
+IZJ@]]4>YXl[8L]ZY_Am?j1
 R1
 R2
-w1463963975
+w1464826590
 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/controlUnit.v
 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/controlUnit.v
 L0 7
@@ -89,7 +133,7 @@ R3
 r1
 !s85 0
 31
-Z8 !s108 1464630751.000000
+!s108 1464837175.000000
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/controlUnit.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/controlUnit.v|
 !s101 -O0
@@ -97,13 +141,13 @@ Z8 !s108 1464630751.000000
 R5
 ncontrol@unit
 vcpu
-R7
+R8
 !i10b 1
-!s100 2d]h0cB`>mli^J9z]Y<3W2
-I]I8zDo<4CHoR>g;UZdz6n0
+!s100 gbGE0O6l7j_64e[jESLKf3
+I^=TiaD>X=k3_84oI@G0Te3
 R1
 R2
-w1464630185
+w1464833724
 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cpu.v
 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cpu.v
 L0 12
@@ -111,28 +155,28 @@ R3
 r1
 !s85 0
 31
-R8
+R10
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cpu.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cpu.v|
 !s101 -O0
 !i113 1
 R5
 vcpuTest
-R7
+R8
 !i10b 1
-!s100 H]Eamdkn;S9eNz?@5?_MB2
-IONQIWbhnzzLhWYFfie>0D1
+!s100 moODzTf0`K6iX@ChnYF>e2
+ICNNLzZkG]6fjcjgY4MG8O2
 R1
 R2
-w1464216902
+w1464833897
 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cputest.v
 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cputest.v
-L0 1
+L0 8
 R3
 r1
 !s85 0
 31
-R8
+R10
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cputest.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cputest.v|
 !s101 -O0
@@ -140,13 +184,13 @@ R8
 R5
 ncpu@test
 vdataMemory
-R7
+R8
 !i10b 1
-!s100 8H2QaEEkXn>=Ki8kbc9_;0
-ImY@fgJG8TVV@Fo@TekUeX0
+!s100 []K;MSI2MRl:Eb=@`G_8h1
+Ig@2b]F=IYe:_0ogg7hLH^3
 R1
 R2
-w1464244332
+w1464835177
 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/dataMemory.v
 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/dataMemory.v
 L0 14
@@ -154,7 +198,7 @@ R3
 r1
 !s85 0
 31
-R8
+R10
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/dataMemory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/dataMemory.v|
 !s101 -O0
@@ -162,23 +206,23 @@ R8
 R5
 ndata@memory
 vIFEX_Reg
-R7
+R8
 !i10b 1
-!s100 oE8dMQ27LbaBj;PZa2DhP2
-IlK=l_;7352V<G]B7<h>Ud0
+!s100 ]]Qb0Qao8P2ElnE8=C_3o3
+IPkEGlnI3^@FK^_]BJ@eX43
 R1
 R2
-w1464622660
-8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFIE_Reg.v
-FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFIE_Reg.v
-L0 1
+w1464834950
+8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IDIE_Reg.v
+FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IDIE_Reg.v
+L0 9
 R3
 r1
 !s85 0
 31
-R8
-!s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFIE_Reg.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFIE_Reg.v|
+R10
+!s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IDIE_Reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IDIE_Reg.v|
 !s101 -O0
 !i113 1
 R5
@@ -190,7 +234,7 @@ vIFID_Reg
 ImVNX2h[QO7CW8^NXVSb_d0
 R1
 R2
-Z9 w1463268489
+Z11 w1463268489
 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFID_Reg.v
 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/IFID_Reg.v
 L0 1
@@ -206,56 +250,56 @@ r1
 R5
 n@i@f@i@d_@reg
 vinstructionMemory
-R7
+R0
 !i10b 1
-!s100 C15[a93[iR<?a7;n4O>362
-ImfO^DV_PjZ<W`dhUN:Mbi0
+!s100 _2ke1e3zP9Y<a`C?2V:Mm3
+Ien31>AbzQ<a3mP35XFTg_0
 R1
 R2
-w1464234320
-8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemoryModule.v
-FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemoryModule.v
+w1464835474
+8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemory.v
+FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemory.v
 L0 9
 R3
 r1
 !s85 0
 31
-R8
-!s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemoryModule.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemoryModule.v|
+R4
+!s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/instructMemory.v|
 !s101 -O0
 !i113 1
 R5
 ninstruction@memory
 vmux32x2
-R7
+R8
 !i10b 1
 !s100 `c9?C;S[fdmdgU@N6B66P2
 I@9Ulc>z?`n[7i3XXFo<8U3
 R1
 R2
 w1463429806
-Z10 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer.v
-Z11 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer.v
+Z12 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer.v
+Z13 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer.v
 L0 8
 R3
 r1
 !s85 0
 31
-R8
-Z12 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer.v|
-Z13 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer.v|
+R10
+Z14 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer.v|
+Z15 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer.v|
 !s101 -O0
 !i113 1
 R5
 vmux32x2_6bits
-R0
+R8
 !i10b 1
-!s100 FGIg_iL8V3fh1[6L666@c2
-ID_10`EjXjfzSGClgHcTUF2
+!s100 7hT:l:6d<Ke_77P@gS?MA1
+I3ULiXl2YNO5Qn98:9SUNb3
 R1
 R2
-w1463288754
+w1464834181
 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer_6bits.v
 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer_6bits.v
 L0 8
@@ -263,7 +307,7 @@ R3
 r1
 !s85 0
 31
-R8
+R10
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer_6bits.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/multiplexer_6bits.v|
 !s101 -O0
@@ -276,36 +320,36 @@ vmux32x4
 IQSEV3]Q<Vz=fDYolDaUJE2
 R1
 R2
-R9
-R10
 R11
+R12
+R13
 L0 19
 R3
 r1
 !s85 0
 31
 !s108 1463292495.000000
-R12
-R13
+R14
+R15
 !s101 -O0
 !i113 1
 R5
 vregfile
-R0
+R8
 !i10b 1
-!s100 Y:0@_@czAR_ONC7NR]OCF2
-IH^fo>T?b@0@QJj<THchQZ2
+!s100 klaR2m0z@jiTJWP>2^?lI0
+IEh>cDn9g=lMYGETR6GnVM2
 R1
 R2
-w1464052000
+w1464834338
 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/regfile.v
 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/regfile.v
-L0 11
+L0 8
 R3
 r1
 !s85 0
 31
-R4
+R10
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/regfile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/regfile.v|
 !s101 -O0
@@ -321,7 +365,7 @@ R2
 w1464247314
 8C:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/signExtender.v
 FC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/signExtender.v
-R6
+R9
 R3
 r1
 !s85 0
