@@ -3,4 +3,4 @@ all: artificalNN.c
 	gcc -g -o artificalNN artificalNN.c
 
 clean:
-	$(RM) artificalNN outputFile1.txt dataImage.txt
+	$(RM) artificalNN outputFile.txt dataImage.txt
