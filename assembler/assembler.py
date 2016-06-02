@@ -267,12 +267,8 @@ def modifycommand( command, arg, shift_amount ):
 
 #this runs modifycommand on each field in the input command
 def output_command( sline ):
-  #sline = "ADD,R1,R2,R31"
 
   argsin = sline.split(',')
-
-# print argsin
-# print argsin[0]
 
   command = 0x00000000
 
@@ -291,30 +287,13 @@ def output_command( sline ):
                      rt_shift_amount,
                      immediate_shift_amount]
   
-#  field_order = [opcode_shift_amount,
-#                 rt_shift_amount,
-#                 rs_shift_amount,
-#                 rd_shift_amount]
 
   arglen = len(argsin)
 
   for field in range(arglen):
     command = modifycommand(command, argsin[field], field_order[field])
-# command = modifycommand(command, argsin[0], opcode_shift_amount)
-# command = modifycommand(command, argsin[1], rs_shift_amount)
-# command = modifycommand(command, argsin[2], rt_shift_amount)
-# command = modifycommand(command, argsin[3], rd_shift_amount)
-# if argsin[4]
-#
-# command = modifycommand(command, argsin[3], rd_shift_amount)
-#
-#
-# print hex(command)
-# print bin(command)
   return command
 
-#http://stackoverflow.com/questions/7165749/open-file-in-a-relative-location-in-python
-#http://stackoverflow.com/questions/4934806/how-can-i-find-scripts-directory-with-python
 import os
 script_dir = os.path.dirname(os.path.realpath(__file__)) #<-- absolute dir the script is in
 rel_path = "inputfile.txt"
