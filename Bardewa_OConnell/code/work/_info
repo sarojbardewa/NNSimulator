@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/Saroj/Desktop/ECE586/NNSimulator/CPU_NN/cpu_simulation
 vALU1
-Z0 !s110 1464901991
+Z0 !s110 1464933336
 !i10b 1
 !s100 giZ;VhJTQJUM4:^YzFmT`3
 I6=2T@eXYHYh7]dbHW7]122
@@ -23,7 +23,7 @@ Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1464901991.000000
+Z4 !s108 1464933336.000000
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/ALU1.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/ALU1.v|
 !s101 -O0
@@ -140,7 +140,7 @@ R4
 R5
 ncpu@test
 vdataMemory
-Z6 !s110 1464901992
+Z6 !s110 1464933337
 !i10b 1
 !s100 []K;MSI2MRl:Eb=@`G_8h1
 I9Fb:afiP1V:_[CAkgcA0D3
@@ -154,7 +154,7 @@ R3
 r1
 !s85 0
 31
-Z7 !s108 1464901992.000000
+R4
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/dataMemory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/dataMemory.v|
 !s101 -O0
@@ -176,7 +176,7 @@ R3
 r1
 !s85 0
 31
-R7
+Z7 !s108 1464933337.000000
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/IDIE_Reg.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/IDIE_Reg.v|
 !s101 -O0
@@ -206,7 +206,7 @@ R7
 R5
 ninstruction@memory
 vmux32x2
-Z8 !s110 1464901993
+R6
 !i10b 1
 !s100 `c9?C;S[fdmdgU@N6B66P2
 IEH3CIM=`_78AdlOhPledF1
@@ -220,14 +220,14 @@ R3
 r1
 !s85 0
 31
-Z9 !s108 1464901993.000000
+R7
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/multiplexer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/multiplexer.v|
 !s101 -O0
 !i113 1
 R5
 vmux32x2_6bits
-R8
+R6
 !i10b 1
 !s100 7hT:l:6d<Ke_77P@gS?MA1
 IMFkNAbUF]=XKDR@W=9I3D0
@@ -241,14 +241,14 @@ R3
 r1
 !s85 0
 31
-R9
+R7
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/multiplexer_6bits.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/multiplexer_6bits.v|
 !s101 -O0
 !i113 1
 R5
 vregfile
-R8
+R6
 !i10b 1
 !s100 klaR2m0z@jiTJWP>2^?lI0
 IKZl:=EVFkQ>CD5oOEASc_2
@@ -262,7 +262,7 @@ R3
 r1
 !s85 0
 31
-R9
+R7
 !s107 C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/regfile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Saroj/Desktop/ECE586/NNSimulator/Bardewa_OConnell/code/regfile.v|
 !s101 -O0

@@ -5,7 +5,7 @@
 #use on Conor's home machine: CD /d  E:\EZ\SCHOOL\2016\ECE486
 #C:\Users\Bacon\AppData\Local\Programs\Python\Python35-32\python.exe BaseCase_ACG.py >1000testcases.txt
 
-NUM_TEST_CASES = 1# number of input vectors
+NUM_TEST_CASES = 1000# number of input vectors
 NUM_IO = 4 # number of inputs and outputs per iteration
 
 # NUM_CODE_LINES gives the base address (start) of the weights and inputs
